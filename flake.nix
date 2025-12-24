@@ -21,7 +21,6 @@
   outputs = { self, nixpkgs, home-manager, ... }@inputs: {
     nixosConfigurations = {
       nix-lab = nixpkgs.lib.nixosSystem {
-        inherit system;
         modules = [
           ./common.nix
           ./hosts/lab/hardware-configuration.nix
@@ -31,7 +30,6 @@
         ];
       };
       mainstation = nixpkgs.lib.nixosSystem {
-        inherit system;
         modules = [
           ./common.nix
           ./hosts/mainstation/hardware-configuration.nix
@@ -41,7 +39,6 @@
         ];
       };
       travelstation = nixpkgs.lib.nixosSystem {
-        inherit system;
         modules = [
           ./common.nix
           ./hosts/travelstation/hardware-configuration.nix
