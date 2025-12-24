@@ -3,7 +3,7 @@
 {
   imports =
     [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
+      /etc/nixos/hardware-configuration.nix
     ];
 
   # Use the systemd-boot EFI boot loader.
@@ -73,16 +73,7 @@
 
   # List packages installed in system profile.
   # You can use https://search.nixos.org/ to find more packages (and options).
-  environment.systemPackages = with pkgs; [
-    vim
-    wget
-    dysk
-    ripgrep
-    unzip
-    zip
-    fd
-    fastfetch
-  ];
+  # environment.systemPackages = with pkgs; [];
 
   environment.variables = {
     EDITOR = "vim";
