@@ -13,10 +13,27 @@
   # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
-  networking.hostName = "nix-lab"; # Define your hostname.
+  ## Networking stuff
 
-  # Configure network connections interactively with nmcli or nmtui.
-  networking.networkmanager.enable = true;
+  networking = {
+    hostName = "nix-lab";
+    networkmanager = {
+      enable = true;
+      ensureProfiles.profiles = {
+        "Wired connection 1" = {
+          connection = {
+            id = "Wired connection 1";
+            type = "802-3-ethernet";
+          };
+          ipv4 = {
+            method = "auto";
+            dns = "10.4.10.5";
+            dns-search = "lly.local";
+          };
+        };
+      };
+    };
+  };
 
   # time zone
   time.timeZone = "America/Chicago";
@@ -76,8 +93,6 @@
     enable = true;
     enableSSHSupport = true;
   };
-
-  ## List services that you want to enable:
 
   # Enable the OpenSSH daemon.
   services.openssh = {
