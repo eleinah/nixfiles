@@ -4,6 +4,7 @@
   home = {
     username = "ellie";
     homeDirectory = "/home/ellie";
+    shell = pkgs.zsh;
 
     packages = with pkgs; [
       fastfetch

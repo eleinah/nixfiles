@@ -10,22 +10,48 @@
   };
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs: {
-    nixosConfigurations = {
-      nix-lab = nixpkgs.lib.nixosSystem {
-        modules = [
-          ./configuration.nix
+    let
+      system = "x86_64-linux";
+      hm-ellie = {
+        home-manager.useGlobalPkgs = true;
+        home-manager.useUserPackages = true;
 
-          home-manager.nixosModules.home-manager
-          {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-
-            home-manager.users = {
-              ellie = import ./home.nix;
-            };
-          }
-        ];
+        home-manager.users = {
+          ellie = import ./users/ellie.nix
+        };
       };
-    };
+    in
+      nixosConfigurations = {
+        nix-lab = nixpkgs.lib.nixosSystem {
+          inherit system;
+          modules = [
+            ./common.nix
+            ./hosts/lab/hardware-configuration.nix
+            ./hosts/lab/configuration.nix
+
+            home-manager.nixosModules.home-manager hm-ellie
+          ];
+        };
+        mainstation = nixpkgs.lib.nixosSystem {
+          inherit system;
+          modules = [
+            ./common.nix
+            ./hosts/mainstation/hardware-configuration.nix
+            ./hosts/mainstation/configuration.nix
+
+            home-manager.nixosModules.home-manager hm-ellie
+          ];
+        };
+        travelstation = nixpkgs.lib.nixosSystem {
+          inherit system;
+          modules = [
+            ./common.nix
+            ./hosts/travelstation/hardware-configuration.nix
+            ./hosts/travelstation/configuration.nix
+
+            home-manager.nixosModules.home-manager hm-ellie
+          ];
+        };
+      };
   };
 }
