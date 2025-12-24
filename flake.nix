@@ -17,7 +17,7 @@
         home-manager.useUserPackages = true;
 
         home-manager.users = {
-          ellie = import ./users/ellie.nix
+          ellie = import ./users/ellie.nix;
         };
       };
     in {
