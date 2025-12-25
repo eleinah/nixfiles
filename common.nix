@@ -12,7 +12,7 @@
 
   environment.systemPackages = with pkgs; [
     vim
-  ]
+  ];
 
   # editor default
   environment.variables = {
