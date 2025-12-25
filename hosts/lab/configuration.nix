@@ -42,56 +42,10 @@
   users.users.ellie = {
     isNormalUser = true;
     extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
+    shell = pkgs.zsh;
     openssh.authorizedKeys.keys = [
         "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQD2M/FCDrMBjERs4nwyXFuNxYMnBwA3fWvb5WiGhkzJdKLv1lBG9VHFOjTGssWhd+y2Y48VgjwmPjg37MxbVEa90wPydGgLzwg69OxyXaJ5D+wXXm0JAHhvhDec3hYN9LXXUDrnFJ7oM5huc5kaAWAdIR0XvETuE1H/Si2IRtSdnh2wvWAEPv16GQ+L95lnpEEhStyy2DqEjrChIvaqXbdHORlxC31whLw3OXmZMOi//PicPgH3oqW+N7UPdbLt0B5L/85nNsPE+/hEBag4yps3EyRApTKWt9v88q3CfiZRY/jIrp/Y4nwJ5DdajFJ6cPyovwWN5M/mwIj7RnvLqmjouwWwP7VMrXd3PEf0v5/Ixj+9Fi+TmLLqeKYG5nxhDfGw0Uywmf7ftpZtSbGdpITNIZJY79be8857d5JC41mIA/hXc7FuRn11yqJc73IjmUp9uqM2EGp+nAQ4LjEHuBPq+d7DQqBi1bsgU54yOzFWdwHa6IYhHWQOjKNuXpdpd6XOyyoXfxi6R693/e1t0FMGmB8ITOGl2WqDSgcXl2QDAYMB0ITcwW006saNR08zFn5KmXT0JhgTDECQwvdNetqA9HFN7eckBecmmni2h40GK5DwsSfPcXMBIwTjI8mHv0bnmi5mV1osJM7sJWCydkyKrOmzbQmVjHl6ZxiHBwzcmw== openpgp:0x161BB29F"
     ];
   };
-
-  programs.firefox.enable = true;
-
-
-  # List packages installed in system profile.
-  # You can use https://search.nixos.org/ to find more packages (and options).
-  # environment.systemPackages = with pkgs; [];
-
-
-  programs.gnupg.agent = {
-    enable = true;
-    enableSSHSupport = true;
-  };
-
-  # Enable the OpenSSH daemon.
-  services.openssh = {
-    enable = true;
-    settings = {
-      X11Forwarding = true;
-      PermitRootLogin = "no";
-      PasswordAuthentication = false;
-    };
-    openFirewall = true;
-  };
-
-  # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
-
-  # This option defines the first version of NixOS you have installed on this particular machine,
-  # and is used to maintain compatibility with application data (e.g. databases) created on older NixOS versions.
-  #
-  # Most users should NEVER change this value after the initial install, for any reason,
-  # even if you've upgraded your system to a new NixOS release.
-  #
-  # This value does NOT affect the Nixpkgs version your packages and OS are pulled from,
-  # so changing it will NOT upgrade your system - see https://nixos.org/manual/nixos/stable/#sec-upgrading for how
-  # to actually do that.
-  #
-  # This value being lower than the current NixOS release does NOT mean your system is
-  # out of date, out of support, or vulnerable.
-  #
-  # Do NOT change this value unless you have manually inspected all the changes it would make to your configuration,
-  # and migrated your data accordingly.
-  #
-  # For more information, see `man configuration.nix` or https://nixos.org/manual/nixos/stable/options#opt-system.stateVersion .
-  system.stateVersion = "25.11"; # Did you read the comment?
 
 }
