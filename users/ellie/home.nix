@@ -130,7 +130,7 @@
           source "${./.zprofile}"
         fi
       '';
-      initContent = ''
+      initExtra = ''
         if [ -f "${./.zshrc}" ]; then
           source "${./.zshrc}"
         fi
@@ -138,29 +138,25 @@
       shellAliases = {
         v = "nvim";
         e = "emacsclient -nw";
-        l="lsd -lh --color=auto --group-directories-first";
-        ls="lsd -h --color=auto --group-directories-first";
-        la="lsd -lah --color=auto --group-directories-first";
-        lt="lsd -a --color=auto --group-directories-first --tree";
-        grep="grep --color=auto";
-        shell="exec $SHELL -l";
-        fk="sudo !!";
-        mv="mv -i";
-        rm="rm -Iv";
-        df="df -h";
-        du="du -h -d 1";
-        wthr="curl wttr.in";
-        ff="fastfetch";
-        view="viu -a";
+        l = "lsd -lh --color=auto --group-directories-first";
+        ls = "lsd -h --color=auto --group-directories-first";
+        la = "lsd -lah --color=auto --group-directories-first";
+        lt = "lsd -a --color=auto --group-directories-first --tree";
+        grep = "grep --color=auto";
+        shell = "exec $SHELL -l";
+        fk = "sudo !!";
+        mv = "mv -i";
+        rm = "rm -Iv";
+        df = "df -h";
+        du = "du -h -d 1";
+        wthr = "curl wttr.in";
+        ff = "fastfetch";
+        view = "viu -a";
       };
       sessionVariables = {
-        export GIT_EDITOR="emacsclient -c -a 'emacs'";
-        export ws="$HOME/workspace";
-        export gh="$ws/github.com/eleinah";
-        export dots="$gh/dotfiles";
-        export scripts="$dots/common/dot-config/scripts";
-        export PATH="$HOME/.cargo/bin:$PATH";
-        export PATH="$HOME/bin:$PATH";
+        GIT_EDITOR = "emacsclient -c -a 'emacs'";
+        ws = "$HOME/workspace";
+        gh = "$ws/github.com/eleinah";
       };
     };
 
