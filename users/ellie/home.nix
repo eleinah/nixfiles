@@ -126,11 +126,11 @@
       enable = true;
       enableCompletion = true;
       profileExtra = ''
-        export EDITOR = "emacsclient -c -a 'emacs'";
-        export TERM = "kitty";
-        export BROWSER = "firefox";
+        export EDITOR="emacsclient -c -a 'emacs'"
+        export TERM="kitty"
+        export BROWSER="firefox"
       '';
-      initContent = ''
+      initExtra = ''
         zmodload zsh/complist
         autoload -U compinit && compinit
         autoload -U colors && colors
