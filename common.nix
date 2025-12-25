@@ -19,6 +19,9 @@
     EDITOR = "vim";
   };
 
+  # allow unfree pkgs
+  nixpkgs.config.allowUnfree = true;
+
   # enable zsh
   programs.zsh = {
     enable = true;
