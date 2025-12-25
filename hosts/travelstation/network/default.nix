@@ -3,6 +3,5 @@
 {
   imports = [
     ./sys.nix
-    ./wireguard.nix
   ];
 }
