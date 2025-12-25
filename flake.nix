@@ -32,7 +32,7 @@
             ./common.nix
             ./hosts/lab
 
-            home-manager.nixosModules.home-manager (hm) ellie
+            home-manager.nixosModules.home-manager hm.ellie
           ];
         };
         mainstation = nixpkgs.lib.nixosSystem {
@@ -41,7 +41,7 @@
             ./common.nix
             ./hosts/mainstation
 
-            home-manager.nixosModules.home-manager (hm) ellie
+            home-manager.nixosModules.home-manager hm.ellie
           ];
         };
         travelstation = nixpkgs.lib.nixosSystem {
@@ -50,7 +50,7 @@
             ./common.nix
             ./hosts/travelstation
 
-            home-manager.nixosModules.home-manager (hm) ellie
+            home-manager.nixosModules.home-manager hm.ellie
           ];
         };
       };
