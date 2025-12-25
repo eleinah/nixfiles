@@ -46,18 +46,6 @@ PROMPT="${NEWLINE}%K{#1e1e2e}%F{#cdd6f4}$(date +%_I:%M%P) %K{#313244}%F{#f5e0dc}
 echo -e "${NEWLINE}\033[48;2;30;30;46;38;2;205;214;244m $0 \033[0m\033[48;2;49;50;68;38;2;205;214;244m $(uptime -p | cut -c 4-) \033[0m\033[48;2;69;71;90;38;2;205;214;244m $(uname -r) \033[0m"
 # echo -e "${NEWLINE}\033[48;2;60;56;54;38;2;235;219;178m $0 \033[0m\033[48;2;80;73;69;38;2;235;219;178m $(uptime -p | cut -c 4-) \033[0m\033[48;2;40;40;40;38;2;235;219;178m $(uname -r) \033[0m" # gruvbox dark theme
 
-# autosuggestions
-# requires zsh-autosuggestions
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-
-# syntax highlighting
-# requires zsh-syntax-highlighting package
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-# autocompletions
-# requires zsh-autocomplete
-source /usr/share/zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
-
 zstyle ':completion:*:(ssh|scp):*' remote-access no
 
 # for GPG

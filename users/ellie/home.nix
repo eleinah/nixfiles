@@ -9,6 +9,7 @@
       fastfetch
       nnn # terminal file manager
       vlc
+      zsh-autocomplete
 
       # langs
       d2

@@ -16,7 +16,11 @@
   };
 
   # enable zsh
-  programs.zsh.enable = true;
+  programs.zsh = {
+    enable = true;
+    autosuggestions.enable = true;
+    syntaxHighlighting.enable = true;
+  };
 
   # GPG stuff
   programs.gnupg.agent = {
