@@ -2,6 +2,7 @@
 
 {
   imports = [
-    ../../../users/ellie/sys.nix
+    ./networkmanager.nix
+    ./sys.nix
   ];
 }

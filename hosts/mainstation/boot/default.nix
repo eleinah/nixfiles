@@ -2,6 +2,6 @@
 
 {
   imports = [
-    ../../../users/ellie/sys.nix
+    ./loader.nix
   ];
 }
