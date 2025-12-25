@@ -4,7 +4,6 @@
   imports = [
     ./archives.nix
     ./audio.nix
-    ./display.nix
     ./editors.nix
     ./gaming.nix
     ./GNU.nix

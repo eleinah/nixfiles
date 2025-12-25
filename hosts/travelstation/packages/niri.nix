@@ -1,7 +1,7 @@
 { config, pkgs, inputs, ... }:
 
 {
-  home.packages = with pkgs; [
+  environment.systemPackages = with pkgs; [
     inputs.niri.packages."${pkgs.system}".niri
   ];
 }

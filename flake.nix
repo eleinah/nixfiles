@@ -51,14 +51,13 @@
         };
         travelstation = nixpkgs.lib.nixosSystem {
           inherit system;
+          specialArgs = { inherit inputs; };
           modules = [
             ./common
             ./users/ellie/sys.nix
             ./hosts/travelstation
 
             home-manager.nixosModules.home-manager hm.ellie
-
-            { _module.args = { inherit inputs; }; }
           ];
         };
       };
