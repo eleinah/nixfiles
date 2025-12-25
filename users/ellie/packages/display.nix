@@ -12,5 +12,8 @@
     swaylock
     xwayland-satellite
     udiskie
+    wl-paste
+    rofi
+    thunar
   ];
 }

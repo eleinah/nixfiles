@@ -11,7 +11,6 @@
     dysk
     lsd
     freerdp
-    flameshot
     viu
     vhs
   ];
