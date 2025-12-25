@@ -13,6 +13,5 @@
     xwayland-satellite
     udiskie
     rofi
-    thunar
   ];
 }
