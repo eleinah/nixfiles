@@ -10,8 +10,15 @@
   # Enable Flakes and the new nix CLI tool
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
+  # editor default
   environment.variables = {
     EDITOR = "vim";
+  };
+
+  # GPG stuff
+  programs.gnupg.agent = {
+    enable = true;
+    enableSSHSupport = true;
   };
 
   # Enable the OpenSSH daemon.
