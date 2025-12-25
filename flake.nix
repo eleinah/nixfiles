@@ -8,8 +8,6 @@
       url = "github:nix-community/home-manager/release-25.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    niri.url = "github:YaLTeR/niri/main";
   };
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs:
@@ -51,7 +49,6 @@
         };
         travelstation = nixpkgs.lib.nixosSystem {
           inherit system;
-          specialArgs = { inherit inputs; };
           modules = [
             ./common
             ./users/ellie/sys.nix
