@@ -5,9 +5,4 @@ input {
             options "caps:escape"
         }
     }
-
-    touchpad {
-        tap
-        natural-scroll
-    }
 }
