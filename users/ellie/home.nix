@@ -164,6 +164,7 @@
         GIT_EDITOR = "emacsclient -c -a 'emacs'";
         ws = "$HOME/workspace";
         gh = "$HOME/workspace/github.com/eleinah";
+        nixfiles = "$HOME/workspace/github.com/eleinah/nixfiles"
       };
       setOptions = [
         "APPEND_HISTORY"
