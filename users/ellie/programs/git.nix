@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  git = {
+  programs.git = {
     enable = true;
     settings = {
       user = {

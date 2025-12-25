@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  packages = with pkgs; [
+  home.packages = with pkgs; [
     sysstat
     lm_sensors
     ethtool

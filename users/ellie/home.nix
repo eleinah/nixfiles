@@ -2,13 +2,9 @@
 
 {
   imports = [
+    ./settings.nix
     ./files
     ./packages
     ./programs
   ];
-
-  home = {
-    username = "ellie";
-    homeDirectory = "/home/ellie";
-  };
 }

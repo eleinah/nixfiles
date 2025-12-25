@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  zsh = {
+  programs.zsh = {
     enable = true;
     enableCompletion = true;
     profileExtra = ''
