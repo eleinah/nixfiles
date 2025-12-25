@@ -1,9 +1,14 @@
 input {
     keyboard {
-        mod "Super"
         xkb {
+            layout "us"
             options "caps:escape"
         }
+    }
+
+    touchpad {
+        tap
+        natural-scroll
     }
 }
 
@@ -61,19 +66,8 @@ binds {
         close-window;
     }
 
-    Mod+Shift+C {
-        reload-config;
-    }
-
     Mod+Shift+E {
         quit;
-    }
-
-    Mod+B {
-        split-column-right;
-    }
-    Mod+V {
-        split-column-down;
     }
 
     Mod+S {
@@ -87,11 +81,7 @@ binds {
     }
 
     Mod+F {
-        toggle-window-fullscreen;
-    }
-
-    Mod+Shift+Space {
-        toggle-window-floating;
+        fullscreen-window
     }
 
     Mod+Space {
@@ -99,7 +89,7 @@ binds {
     }
 
     Mod+A {
-        overview;
+        toggle-overview;
     }
 
     Mod+1 { focus-workspace 1; }
