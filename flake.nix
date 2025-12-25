@@ -12,12 +12,16 @@
   outputs = { self, nixpkgs, home-manager, ... }@inputs:
     let
       system = "x86_64-linux";
-      hm-ellie = {
-        home-manager.useGlobalPkgs = true;
-        home-manager.useUserPackages = true;
+      hm = {
 
-        home-manager.users = {
-          ellie = import ./users/ellie;
+        ellie = {
+          home-manager.useGlobalPkgs = true;
+          home-manager.useUserPackages = true;
+
+          home-manager.users = {
+            ellie = import ./users/ellie;
+          };
+
         };
       };
     in {
@@ -28,7 +32,7 @@
             ./common.nix
             ./hosts/lab
 
-            home-manager.nixosModules.home-manager hm-ellie
+            home-manager.nixosModules.home-manager (hm) ellie
           ];
         };
         mainstation = nixpkgs.lib.nixosSystem {
@@ -37,7 +41,7 @@
             ./common.nix
             ./hosts/mainstation
 
-            home-manager.nixosModules.home-manager hm-ellie
+            home-manager.nixosModules.home-manager (hm) ellie
           ];
         };
         travelstation = nixpkgs.lib.nixosSystem {
@@ -46,7 +50,7 @@
             ./common.nix
             ./hosts/travelstation
 
-            home-manager.nixosModules.home-manager hm-ellie
+            home-manager.nixosModules.home-manager (hm) ellie
           ];
         };
       };
