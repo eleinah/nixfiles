@@ -11,9 +11,6 @@ binds {
     Mod+Shift+D {
         spawn-sh "rofi -modi run,drun,window -show run";
     }
-    Mod+Shift+F {
-        spawn "thunar";
-    }
 
     Mod+Shift+Q {
         close-window;
