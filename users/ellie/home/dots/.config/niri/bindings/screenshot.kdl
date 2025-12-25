@@ -1,5 +1,5 @@
 binds {
     Print {
-        spawn "flameshot" "--region";
+        screenshot;
     }
 }

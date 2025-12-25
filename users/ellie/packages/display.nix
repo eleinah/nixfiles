@@ -12,6 +12,5 @@
     swaylock
     xwayland-satellite
     udiskie
-    rofi
   ];
 }

@@ -6,10 +6,7 @@ binds {
         spawn-sh "emacsclient -c -a 'emacs'";
     }
     Mod+D {
-        spawn-sh "rofi -modi run,drun,window -show drun";
-    }
-    Mod+Shift+D {
-        spawn-sh "rofi -modi run,drun,window -show run";
+        spawn "fuzzel";
     }
 
     Mod+Shift+Q {
