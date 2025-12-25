@@ -8,6 +8,5 @@
     ./niriswitcher.nix
     ./starship.nix
     ./zsh.nix
-    ./thunar.nix
   ];
 }
