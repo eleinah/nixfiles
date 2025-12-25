@@ -4,7 +4,7 @@
   networking.networkmanager = {
 
     ensureProfiles.profiles = {
-      "Home WiFi" = {
+      "Three Musketeers :3" = {
         connection = {
           id = "Three Musketeers :3";
           type = "802-11-wireless";
