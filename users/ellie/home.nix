@@ -5,7 +5,7 @@
     username = "ellie";
     homeDirectory = "/home/ellie";
 
-    home.file = {
+    file = {
       "starship.toml" = {
         source = ./dots/.config/starship.toml;
       };
