@@ -26,7 +26,7 @@
           inherit system;
           modules = [
             ./common.nix
-            ./hosts/lab/configuration.nix
+            ./hosts/lab
 
             home-manager.nixosModules.home-manager hm-ellie
           ];
@@ -35,7 +35,7 @@
           inherit system;
           modules = [
             ./common.nix
-            ./hosts/mainstation/configuration.nix
+            ./hosts/mainstation
 
             home-manager.nixosModules.home-manager hm-ellie
           ];
@@ -44,7 +44,7 @@
           inherit system;
           modules = [
             ./common.nix
-            ./hosts/travelstation/configuration.nix
+            ./hosts/travelstation
 
             home-manager.nixosModules.home-manager hm-ellie
           ];

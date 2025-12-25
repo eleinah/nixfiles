@@ -8,5 +8,6 @@
     ./users
     ./input
     ./audio
+    ./programs
   ];
 }

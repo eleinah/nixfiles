@@ -7,6 +7,5 @@
     ./kitty.nix
     ./starship.nix
     ./zsh.nix
-    ./steam.nix
   ];
 }
