@@ -10,7 +10,7 @@
       ips = [ "10.99.99.99/32" ];
 
       # TODO: get secrets manager working
-      privateKeyFile = "";
+      privateKeyFile = "/home/ellie/.config/wireguard/wg0-private";
 
       peers = [
         {
