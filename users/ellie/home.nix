@@ -6,11 +6,8 @@
     homeDirectory = "/home/ellie";
 
     file = {
-      ".config/starship.toml" = {
-        source = ./dots/.config/starship.toml;
-      };
-      ".config/scripts" = {
-        source = ./dots/.config/scripts;
+      ".config" = {
+        source = ./dots/.config;
         recursive = true;
         executable = true;
       };
