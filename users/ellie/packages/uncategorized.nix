@@ -6,5 +6,6 @@
     nnn # terminal file manager
     vlc
     zsh-autocomplete
+    vesktop # discord client
   ];
 }
