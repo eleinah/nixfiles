@@ -152,7 +152,7 @@
         grep = "grep --color=auto";
         shell = "exec $SHELL -l";
         fk = "sudo !!";
-        mv = "mv -i";
+        mv = "mv -iv";
         rm = "rm -Iv";
         df = "df -h";
         du = "du -h -d 1";
