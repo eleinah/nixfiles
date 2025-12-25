@@ -14,5 +14,6 @@
     freerdp
     viu
     vhs
+    wl-clipboard
   ];
 }
