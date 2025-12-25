@@ -3,7 +3,6 @@
 {
   imports = [
     ./network
-    ./users
     ./hardware-configuration.nix
   ];
 }

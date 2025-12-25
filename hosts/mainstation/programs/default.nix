@@ -2,7 +2,6 @@
 
 {
   imports = [
-    ../../../common/programs
     ./steam.nix
   ];
 }

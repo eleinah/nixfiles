@@ -30,6 +30,7 @@
           inherit system;
           modules = [
             ./common
+            ./users/ellie
             ./hosts/lab
 
             home-manager.nixosModules.home-manager hm.ellie
@@ -39,6 +40,7 @@
           inherit system;
           modules = [
             ./common
+            ./users/ellie
             ./hosts/mainstation
 
             home-manager.nixosModules.home-manager hm.ellie
@@ -48,6 +50,7 @@
           inherit system;
           modules = [
             ./common
+            ./users/ellie
             ./hosts/travelstation
 
             home-manager.nixosModules.home-manager hm.ellie
