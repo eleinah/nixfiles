@@ -15,6 +15,9 @@
     EDITOR = "vim";
   };
 
+  # enable zsh
+  programs.zsh.enable = true;
+
   # GPG stuff
   programs.gnupg.agent = {
     enable = true;
