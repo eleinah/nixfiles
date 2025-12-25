@@ -1,0 +1,23 @@
+#!/bin/bash
+
+set -euo pipefail
+
+if [ -z "${dots:-}"  ]; then
+    echo "Error!: 'dots' env var is not set. Check possible areas causing issue:"
+    echo "  - ~/.zprofile"
+    echo "  - ~/.zshrc"
+    echo "  - ~/.config/shell/vars"
+    exit 1
+fi
+
+if [ ! -d "$dots" ]; then
+    echo "The directory '$dots' does not exist. Please correct this and try again."
+    exit 1
+fi
+
+# TODO: Add conversions to .docx and .pdf to sync to gdrive
+cd "$dots/travelstation/org/work/export"
+
+rclone sync . gdrive:laptop/ --exclude ".git/**"
+
+echo "Synced local files with Google Drive."

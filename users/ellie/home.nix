@@ -5,6 +5,17 @@
     username = "ellie";
     homeDirectory = "/home/ellie";
 
+    home.file = {
+      "starship.toml" = {
+        source = ./dots/.config/starship.toml;
+      };
+      ".config/scripts" = {
+        source = ./dots/.config/scripts;
+        recursive = true;
+        executable = true;
+      };
+    };
+
     packages = with pkgs; [
       fastfetch
       nnn # terminal file manager
@@ -17,7 +28,7 @@
 
       # editors
       emacs
-      vim
+      neovim
 
       # audio
       kew
@@ -124,6 +135,33 @@
           source "${./.zshrc}"
         fi
       '';
+      shellAliases = {
+        v = "nvim";
+        e = "emacsclient -nw";
+        l="lsd -lh --color=auto --group-directories-first";
+        ls="lsd -h --color=auto --group-directories-first";
+        la="lsd -lah --color=auto --group-directories-first";
+        lt="lsd -a --color=auto --group-directories-first --tree";
+        grep="grep --color=auto";
+        shell="exec $SHELL -l";
+        fk="sudo !!";
+        mv="mv -i";
+        rm="rm -Iv";
+        df="df -h";
+        du="du -h -d 1";
+        wthr="curl wttr.in";
+        ff="fastfetch";
+        view="viu -a";
+      };
+      sessionVariables = {
+        export GIT_EDITOR="emacsclient -c -a 'emacs'";
+        export ws="$HOME/workspace";
+        export gh="$ws/github.com/eleinah";
+        export dots="$gh/dotfiles";
+        export scripts="$dots/common/dot-config/scripts";
+        export PATH="$HOME/.cargo/bin:$PATH";
+        export PATH="$HOME/bin:$PATH";
+      };
     };
 
     firefox = {

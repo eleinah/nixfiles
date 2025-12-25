@@ -10,6 +10,10 @@
   # Enable Flakes and the new nix CLI tool
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
+  environment.systemPackages = with pkgs; [
+    vim
+  ]
+
   # editor default
   environment.variables = {
     EDITOR = "vim";
