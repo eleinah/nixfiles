@@ -163,7 +163,7 @@
       sessionVariables = {
         GIT_EDITOR = "emacsclient -c -a 'emacs'";
         ws = "$HOME/workspace";
-        gh = "$ws/github.com/eleinah";
+        gh = "${ws}/github.com/eleinah";
       };
       setOptions = [
         "APPEND_HISTORY"
