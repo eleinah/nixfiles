@@ -7,20 +7,9 @@ input {
     }
 }
 
-spawn-at-startup "dbus-update-activation-environment"
-    "--systemd"
-    "WAYLAND_DISPLAY"
-    "XDG_CURRENT_DESKTOP=niri"
-
+spawn-at-startup "dbus-update-activation-environment" "--systemd" "WAYLAND_DISPLAY" "XDG_CURRENT_DESKTOP=niri"
 spawn-at-startup "wl-paste"
-
-spawn-at-startup "systemctl"
-    "--user"
-    "import-environment"
-    "DISPLAY"
-    "WAYLAND_DISPLAY"
-    "NIRI_SOCKET"
-
+spawn-at-startup "systemctl" "--user" "import-environment" "DISPLAY" "WAYLAND_DISPLAY" "NIRI_SOCKET"
 spawn-at-startup "mako"
 
 binds {
@@ -47,9 +36,8 @@ binds {
     Print {
         spawn "flameshot" "--region";
     }
-}
 
-binds {
+    // Core bindings
     Mod+Return {
         spawn "kitty";
     }
