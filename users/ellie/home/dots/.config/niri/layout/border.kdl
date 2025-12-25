@@ -1,0 +1,10 @@
+layout {
+    border {
+        // this replaces the focus-ring. disable that before enabling this.
+        off
+        width 4
+        active-color "ffc87f"
+        inactive-color "505050"
+        urgent-color "9b0000"
+    }
+}
