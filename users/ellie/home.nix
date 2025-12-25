@@ -125,16 +125,8 @@
     zsh = {
       enable = true;
       enableCompletion = true;
-      profileExtra = ''
-        if [ -f "${./.zprofile}" ]; then
-          source "${./.zprofile}"
-        fi
-      '';
-      initExtra = ''
-        if [ -f "${./.zshrc}" ]; then
-          source "${./.zshrc}"
-        fi
-      '';
+      profileExtra = builtins.readFile ./zprofile;
+      initExtra = builtins.readFile ./zshrc;
       shellAliases = {
         v = "nvim";
         e = "emacsclient -nw";
