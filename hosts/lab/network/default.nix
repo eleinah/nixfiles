@@ -2,6 +2,7 @@
 
 {
   imports = [
-    ./laptop.nix
+    ./networkmanager.nix
+    ./sys.nix
   ];
 }

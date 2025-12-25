@@ -2,6 +2,6 @@
 
 {
   imports = [
-    ./laptop.nix
+    ./loader.nix
   ];
 }
