@@ -5,7 +5,7 @@
     wireguard-tools
   ];
 
-  networking.wireguard.interfaces {
+  networking.wireguard.interfaces = {
     wg0 = {
       ips = [ "10.99.99.99/32" ];
 
