@@ -2,6 +2,6 @@
 
 {
   imports = [
-    ./loader.nix
+    ./networkmanager.nix
   ];
 }

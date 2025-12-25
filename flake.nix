@@ -29,7 +29,7 @@
         nix-lab = nixpkgs.lib.nixosSystem {
           inherit system;
           modules = [
-            ./common.nix
+            ./common
             ./hosts/lab
 
             home-manager.nixosModules.home-manager hm.ellie
@@ -38,7 +38,7 @@
         mainstation = nixpkgs.lib.nixosSystem {
           inherit system;
           modules = [
-            ./common.nix
+            ./common
             ./hosts/mainstation
 
             home-manager.nixosModules.home-manager hm.ellie
@@ -47,7 +47,7 @@
         travelstation = nixpkgs.lib.nixosSystem {
           inherit system;
           modules = [
-            ./common.nix
+            ./common
             ./hosts/travelstation
 
             home-manager.nixosModules.home-manager hm.ellie

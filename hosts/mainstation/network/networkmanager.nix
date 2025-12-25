@@ -2,7 +2,6 @@
 
 {
   networking.networkmanager = {
-    enable = true;
 
     ensureProfiles.profiles = {
       "Wired connection 1" = {
@@ -17,5 +16,6 @@
         };
       };
     };
+
   };
 }
