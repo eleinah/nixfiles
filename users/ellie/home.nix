@@ -125,7 +125,7 @@
     zsh = {
       enable = true;
       enableCompletion = true;
-      profileExtras = ''
+      profileExtra = ''
         EDITOR = "emacsclient -c -a 'emacs'";
         TERM = "kitty";
         BROWSER = "firefox";
