@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  file = {
+  home.file = {
     ".config" = {
         source = ../home/dots/.config;
         recursive = true;

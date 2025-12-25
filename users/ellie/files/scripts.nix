@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  file = {
+  home.file = {
     "scripts" = {
         source = ../home/scripts;
         recursive = true;
