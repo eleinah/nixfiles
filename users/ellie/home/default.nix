@@ -13,6 +13,10 @@
       recursive = true;
       executable = true;
     };
+
+    ".ssh/config" = {
+      source = ./dots/.ssh/config;
+    };
     
   };
 }
