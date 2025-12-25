@@ -125,8 +125,26 @@
     zsh = {
       enable = true;
       enableCompletion = true;
-      profileExtra = builtins.readFile ./.zprofile;
-      initExtra = builtins.readFile ./.zshrc;
+      profileExtras = ''
+        EDITOR = "emacsclient -c -a 'emacs'";
+        TERM = "kitty";
+        BROWSER = "firefox";
+      '';
+      initContent = ''
+        zmodload zsh/complist
+        autoload -U compinit && compinit
+        autoload -U colors && colors
+
+        zstyle ':completion:*' menu select # tab opens cmp menu
+        zstyle ':completion:*' special-dirs true # force . and .. to show in cmp menu
+        zstyle ':completion:*' squeeze-slashes false # explicit disable to allow /*/ expansion
+        zstyle ':completion:*:(ssh|scp):*' remote-access no
+
+        export GPG_TTY=$(tty)
+        gpg-connect-agent updatestartuptty /bye >/dev/null
+
+        eval "$(starship init zsh)"
+      '';
       shellAliases = {
         v = "nvim";
         e = "emacsclient -nw";
@@ -150,6 +168,20 @@
         ws = "$HOME/workspace";
         gh = "$ws/github.com/eleinah";
       };
+      setOptions = [
+        "APPEND_HISTORY"
+        "INC_APPEND_HISTORY"
+        "SHARE_HISTORY"
+        "AUTO_MENU"
+        "MENU_COMPLETE"
+        "AUTOCD"
+        "AUTO_PARAM_SLASH"
+        "NO_CASE_GLOB"
+        "NO_CASE_MATCH"
+        "GLOBDOTS"
+        "EXTENDED_GLOB"
+        "INTERACTIVE_COMMENTS"
+      ];
     };
 
     firefox = {
