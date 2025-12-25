@@ -33,7 +33,7 @@ binds {
     Mod+Ctrl+R { reset-window-height; }
 
     Mod+Minus { set-column-width "-10%"; }
-    Mod+Shift+Minus { set-column-height "-10%"; }
+    Mod+Shift+Minus { set-window-height "-10%"; }
     Mod+Equal { set-column-width "+10%"; }
-    Mod+Shift+Equal { set-column-height "+10%"; }
+    Mod+Shift+Equal { set-window-height "+10%"; }
 }
