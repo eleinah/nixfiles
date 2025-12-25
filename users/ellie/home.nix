@@ -6,6 +6,7 @@
     ./packages
     ./programs
   ];
+
   home = {
     username = "ellie";
     homeDirectory = "/home/ellie";
