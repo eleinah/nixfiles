@@ -130,7 +130,7 @@
         export TERM="kitty"
         export BROWSER="firefox"
       '';
-      initExtra = ''
+      initContent = ''
         zmodload zsh/complist
         autoload -U compinit && compinit
         autoload -U colors && colors
