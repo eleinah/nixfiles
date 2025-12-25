@@ -14,9 +14,6 @@ binds {
     Mod+Shift+F {
         spawn "thunar";
     }
-    Mod+Ctrl+L {
-        spawn "swaylock" "--color" "000000";
-    }
 
     Mod+Shift+Q {
         close-window;
