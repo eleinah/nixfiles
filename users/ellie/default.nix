@@ -2,7 +2,6 @@
 
 {
   imports = [
-    ./sys.nix
     ./settings.nix
     ./files
     ./packages
