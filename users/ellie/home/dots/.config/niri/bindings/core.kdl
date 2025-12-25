@@ -22,6 +22,6 @@ binds {
     }
 
     Mod+Ctrl+L hotkey-overlay-title="Lock System" {
-        spawn "swaylock --color 000000"
+        spawn-sh "swaylock --color 000000"
     }
 }
