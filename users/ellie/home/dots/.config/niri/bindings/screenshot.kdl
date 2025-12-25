@@ -1,0 +1,5 @@
+binds {
+    Print {
+        spawn "flameshot" "--region";
+    }
+}

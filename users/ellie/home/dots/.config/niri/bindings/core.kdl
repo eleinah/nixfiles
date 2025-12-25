@@ -1,0 +1,28 @@
+binds {
+    Mod+Return {
+        spawn "kitty";
+    }
+    Mod+Shift+Return {
+        spawn-sh "emacsclient -c -a 'emacs'";
+    }
+    Mod+D {
+        spawn-sh "rofi -modi run,drun,window -show drun";
+    }
+    Mod+Shift+D {
+        spawn-sh "rofi -modi run,drun,window -show run";
+    }
+    Mod+Shift+F {
+        spawn "thunar";
+    }
+    Mod+Ctrl+L {
+        spawn "swaylock" "--color" "000000";
+    }
+
+    Mod+Shift+Q {
+        close-window;
+    }
+
+    Mod+Shift+E {
+        quit;
+    }
+}

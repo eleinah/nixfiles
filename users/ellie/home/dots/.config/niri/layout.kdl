@@ -1,0 +1,29 @@
+binds {
+    Mod+H {
+        focus-column-left;
+    }
+    Mod+Shift+H {
+        move-column-left;
+    }
+    Mod+L {
+        focus-column-right;
+    }
+    Mod+Shift+L {
+        move-column-right;
+    }
+    Mod+E {
+        maximize-column;
+    }
+
+    Mod+F {
+        fullscreen-window
+    }
+
+    Mod+Space {
+        toggle-window-floating;
+    }
+
+    Mod+A {
+        toggle-overview;
+    }
+}
