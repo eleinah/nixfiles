@@ -126,9 +126,9 @@
       enable = true;
       enableCompletion = true;
       profileExtra = ''
-        EDITOR = "emacsclient -c -a 'emacs'";
-        TERM = "kitty";
-        BROWSER = "firefox";
+        export EDITOR = "emacsclient -c -a 'emacs'";
+        export TERM = "kitty";
+        export BROWSER = "firefox";
       '';
       initContent = ''
         zmodload zsh/complist
