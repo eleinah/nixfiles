@@ -10,6 +10,7 @@
     bottom
     dysk
     lsd
+    flameshot
     freerdp
     viu
     vhs

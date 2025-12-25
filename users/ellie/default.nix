@@ -6,6 +6,5 @@
     ./home
     ./packages
     ./programs
-    ./services
   ];
 }
