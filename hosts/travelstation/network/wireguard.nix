@@ -18,7 +18,7 @@
           endpoint = "vpn.eleina.sh:51820";
           allowedIPs = [ "0.0.0.0/0" "::/0" ];
           persistentKeepalive = 25;
-        };
+        }
       ];
     };
   };
