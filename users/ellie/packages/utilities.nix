@@ -15,5 +15,6 @@
     viu
     vhs
     wl-clipboard
+    xarchiver
   ];
 }
