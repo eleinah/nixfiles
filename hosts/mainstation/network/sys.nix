@@ -1,5 +1,5 @@
 { config, pkgs, ... }:
 
 {
-  networking.hostName = "nix-lab";
+  networking.hostName = "mainstation";
 }
