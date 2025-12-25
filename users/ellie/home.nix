@@ -65,9 +65,6 @@
       yubico-pam
       yubikey-manager
 
-      # vcs
-      github-cli
-
       # nix specific
       nix-output-monitor
 

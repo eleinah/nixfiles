@@ -65,12 +65,7 @@ export QT_QPA_PLATFORM=wayland
 unset SSH_AGENT_PID
 export SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}/gnupg/S.gpg-agent.ssh"
 
-# for Magit forge
-export GITHUB_TOKEN="$(gh auth token)"
-
-
 # Start Sway
 if [[ -z "$WAYLAND_DISPLAY" && -n "$XDG_VTNR" && "$XDG_VTNR" -eq 1 ]]; then
     exec sway
 fi
-
