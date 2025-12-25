@@ -1,7 +1,0 @@
-layout {
-    // firefox PiP
-    window-rule {
-        match app-id=r#"firefox$"# title="^Picture-inPicture$"
-        open-floating true
-    }
-}
