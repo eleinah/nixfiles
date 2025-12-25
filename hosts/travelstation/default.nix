@@ -4,6 +4,7 @@
   imports = [
     ./input
     ./network
+    ./packages
     ./hardware-configuration.nix
   ];
 }
