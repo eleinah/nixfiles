@@ -9,6 +9,5 @@
     ./niriswitcher.nix
     ./starship.nix
     ./zsh.nix
-    ./waybar.nix
   ];
 }
