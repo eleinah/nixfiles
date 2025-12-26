@@ -1,14 +1,14 @@
 // desktop displays
 output "DP-3" {
-    mode "2560x1440@164.999Hz"
+    mode "2560x1440@164.999"
     position x=11120 y=0
     transform "270"
 }
 output "DP-4" {
-    mode "3440x1440@99.982Hz"
+    mode "3440x1440@99.982"
     position x=7680 y=720
 }
 output "HDMI-A-4" {
-    mode "2560x1440@74.78Hz"
+    mode "2560x1440@74.78"
     position x=5120 y=720
 }
