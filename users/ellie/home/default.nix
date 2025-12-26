@@ -5,7 +5,7 @@ let
     owner = "doomemacs";
     repo = "doomemacs";
     rev = "v2.0.9";
-    sha256 = pkgs.lib.fakeSha256;
+    sha256 = "sha256-foiHHP85kZz4UwR8RfmB11xLoC+NbNdQ+sA2YJd/HqQ=";
     fetchSubmodules = true;
   };
 in {
