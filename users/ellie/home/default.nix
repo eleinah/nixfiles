@@ -18,5 +18,10 @@
       source = ./dots/.ssh/config;
     };
 
+    "Pictures/wallpapers" = {
+      source = ./wallpapers;
+      recursive = true;
+    };
+
   };
 }
