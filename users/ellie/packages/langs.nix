@@ -17,6 +17,6 @@
     go
     libxml2
     cmake
-    make
+    gnumake
   ];
 }
