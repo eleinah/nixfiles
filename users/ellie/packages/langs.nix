@@ -16,7 +16,6 @@
     nix
     go
     libxml2
-    npm
     cmake
     make
   ];
