@@ -17,7 +17,7 @@
     noto-fonts-emoji-blob-bin
     noto-fonts-cjk-sans
     font-awesome_6
-    builtins.filter lib.attrsets.isDerivation (builtins.attrValues nerd-fonts);
+    builtins.filter lib.attrsets.isDerivation (builtins.attrValues nerd-fonts)
   ];
 
   # editor default
