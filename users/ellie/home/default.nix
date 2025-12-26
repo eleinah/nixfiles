@@ -4,7 +4,7 @@ let
   doomSrc = pkgs.fetchFromGitHub {
     owner = "doomemacs";
     repo = "doomemacs";
-    rev = "master";
+    rev = "v2.0.9";
     sha256 = pkgs.lib.fakeSha256;
     fetchSubmodules = true;
   };
