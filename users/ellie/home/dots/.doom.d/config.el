@@ -175,3 +175,6 @@
     (define-key map (kbd "C-x C-o") 'd2-view-current-svg)
     (define-key map (kbd "C-c C-d") 'd2-open-doc)
     map))
+
+;; Set the font
+(setq doom-font (font-spec :family "DepartureMono Nerd Font" :size 13))
