@@ -20,7 +20,11 @@
     noto-fonts-emoji-blob-bin
     noto-fonts-cjk-sans
     font-awesome_6
-    nerd-fonts
+    nerd-font-patcher
+    nerd-fonts.noto
+    nerd-fonts.hack
+    nerd-fonts.departure-mono
+    nerd-fonts.jetbrains-mono
   ];
 
   # editor default
