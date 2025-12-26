@@ -18,10 +18,6 @@
       source = ./dots/.ssh/config;
     };
 
-    ".doom.d" = {
-      source = ./dots/.doom.d;
-    };
-
     "Pictures/wallpapers" = {
       source = ./wallpapers;
       recursive = true;
