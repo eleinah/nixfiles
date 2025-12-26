@@ -11,43 +11,35 @@
         "height" = 0;
 
         "modules-left" = [
-          "sway/workspaces";
-          "sway/mode";
-          "sway/scratchpad"
+          "niri/workspaces"
         ];
 
         "modules-center" = [
-          "pulseaudio";
+          "pulseaudio"
           "pulseaudio#microphone"
         ];
 
         "modules-right" = [
-          "idle_inhibitor";
-          "network";
-          "cpu";
-          "memory";
-          "temperature";
-          "keyboard-state";
-          "sway/language";
-          "clock";
-          "tray";
+          "idle_inhibitor"
+          "network"
+          "cpu"
+          "memory"
+          "temperature"
+          "keyboard-state"
+          "niri/language"
+          "clock"
+          "tray"
           "custom/power"
         ];
 
-        "sway/scratchpad" = {
-          "format" = "S";
-          "disable-scroll" = true;
-          "warp-on-scroll" = false
-        };
-
-        "sway/workspaces" = {
+        "niri/workspaces" = {
           "disable-scroll" = true;
           "all-outputs" = false;
           "warp-on-scroll" = false;
           "format" = "{name} {icon}";
           "format-icons" = {
 	          "default" = "";
-	          "focused" = ""
+	          "focused" = "";
           };
         };
 
@@ -58,42 +50,42 @@
           "format" = "{icon}";
           "format-icons" = {
             "locked" = "";
-	          "unlocked" = ""
-          }
+	          "unlocked" = "";
+          };
         };
 
         "idle_inhibitor" = {
           "format" = "{icon}";
           "format-icons" = {
             "activated" = "";
-	          "deactivated" = ""
-          }
+	          "deactivated" = "";
+          };
         };
 
         "tray" = {
           "icon-size" = 11;
-          "spacing" = 8
+          "spacing" = 8;
         };
 
         "clock" = {
           "timezone" = "America/Chicago";
           "tooltip-format" = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
-          "format-alt" = "{:%Y-%m-%d}"
+          "format-alt" = "{:%Y-%m-%d}";
         };
 
         "cpu" = {
           "format" = "{usage}% ";
-          "tooltip" = false
+          "tooltip" = false;
         };
 
         "memory" = {
-          "format" = "{}% "
+          "format" = "{}% ";
         };
 
         "temperature" = {
           "critical-threshold" = 80;
           "format" = "{temperatureC}°C {icon}";
-          "format-icons" = [""]
+          "format-icons" = [""];
         };
 
         "network" = {
@@ -106,31 +98,31 @@
         };
 
         "battery" = {
-          "bat" = "BAT0",
-          "interval" = 20,
+          "bat" = "BAT0";
+          "interval" = 20;
           "states" = {
-            "warning" = 20,
-            "critical" = 10
-          },
-          "format" = "{capacity}% {icon}",
-          "format-charging" = "{capacity}% ",
-          "format-plugged" = "{capacity}% ",
-          "format-full" = "{capacity}% ",
-          "format-icons" = ["", "", "", "", ""],
-          "tooltip-format" = "{time} remaining"
-        },
+            "warning" = 20;
+            "critical" = 10;
+          };
+          "format" = "{capacity}% {icon}";
+          "format-charging" = "{capacity}% ";
+          "format-plugged" = "{capacity}% ";
+          "format-full" = "{capacity}% ";
+          "format-icons" = ["" "" "" "" ""];
+          "tooltip-format" = "{time} remaining";
+        };
 
         "pulseaudio" = {
           "format" = "{icon} {volume}%";
           "tooltip" = false;
           "format-muted" = " Muted";
           "format-icons" = {
-            "default" = [""; "", ""]
+            "default" = ["" "" ""];
           };
           "on-scroll-up" = "pamixer -i 2";
           "on-scroll-down" = "pamixer -d 2";
           "scroll-step" = 5;
-          "on-click" = "pamixer -t"
+          "on-click" = "pamixer -t";
         };
 
         "pulseaudio#microphone" = {
@@ -141,7 +133,7 @@
           "on-click" = "pamixer --default-source -t";
           "on-scroll-up" = "pamixer --default-source -i 2";
           "on-scroll-down" = "pamixer --default-source -d 2";
-          "scroll-step" = 5
+          "scroll-step" = 5;
         };
 
         "custom/power" = {
@@ -153,7 +145,7 @@
             "shutdown" = "poweroff";
             "reboot" = "reboot";
             "suspend" = "systemctl suspend";
-            "hibernate" = "systemctl hibernate"
+            "hibernate" = "systemctl hibernate";
           };
         };
       };
