@@ -1,6 +1,3 @@
-[submodule "users/ellie/doom"]
-	path = users/ellie/doom
-	url = https://github.com/doomemacs/doomemacs.git
 [submodule "users/ellie/home/doom"]
 	path = users/ellie/home/doom
 	url = https://github.com/doomemacs/doomemacs.git
