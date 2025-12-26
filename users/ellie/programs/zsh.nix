@@ -8,7 +8,7 @@
       if [[ -z "$WAYLAND_DISPLAY" && -n "$XDG_VTNR" && "$XDG_VTNR" -eq 1 ]]; then
           exec niri-session
       fi
-    ''
+    '';
     profileExtra = ''
       export EDITOR="emacsclient -c -a 'emacs'"
       export TERM="kitty"
