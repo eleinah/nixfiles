@@ -41,6 +41,8 @@
             ./users/ellie/sys.nix
             ./hosts/lab
 
+	    inputs.caelestia-shell.homeManagerModules.default
+
             home-manager.nixosModules.home-manager hm.ellie
           ];
         };
@@ -62,6 +64,8 @@
             ./common
             ./users/ellie/sys.nix
             ./hosts/travelstation
+
+	    inputs.caelestia-shell.homeManagerModules.default
 
             home-manager.nixosModules.home-manager hm.ellie
           ];

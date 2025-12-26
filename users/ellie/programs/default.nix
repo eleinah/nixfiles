@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ./caelestia.nix
     ./firefox.nix
     ./git.nix
     ./kitty.nix
