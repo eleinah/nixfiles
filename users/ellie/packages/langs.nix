@@ -13,8 +13,12 @@
     pipenv
     python313Packages.nose2
     python313Packages.pytest
-    nix
+    nixfmt
     go
+    gopls
+    gomodifytags
+    gotests
+    gore
     libxml2
     cmake
     gnumake
