@@ -25,6 +25,7 @@
     nerd-fonts.hack
     nerd-fonts.departure-mono
     nerd-fonts.jetbrains-mono
+    nerd-fonts.symbols-only
   ];
 
   # editor default
