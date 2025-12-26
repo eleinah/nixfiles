@@ -1,6 +1,14 @@
 { config, pkgs, ... }:
 
-{
+let
+  doomSrc = pkgs.fetchFromGitHub {
+    owner = "doomemacs";
+    repo = "doomemacs";
+    rev = "master";
+    sha256 = pkgs.lib.fakeSha256;
+    fetchSubmodules = true;
+  };
+in {
   home.file = {
 
     ".config" = {
@@ -23,7 +31,7 @@
     };
 
     ".emacs.d" = {
-      source = ./doom;
+      source = doomSrc;
       recursive = true;
       executable = true;
     };
