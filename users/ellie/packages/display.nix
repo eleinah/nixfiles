@@ -6,9 +6,6 @@
     mako
     xdg-desktop-portal-gtk
     xdg-desktop-portal-gnome
-    swaybg
-    swayidle
-    swaylock
     xwayland-satellite
     udiskie
   ];

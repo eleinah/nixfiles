@@ -15,5 +15,7 @@
     vhs
     wl-clipboard
     xarchiver
+    ispell
+    aspell
   ];
 }
