@@ -1,0 +1,322 @@
+{ config, pkgs, ... }:
+
+{
+  programs.waybar = {
+    enable = true;
+
+    settings = [
+      {
+        "layer": "top";
+        "position": "top";
+        "height": 0;
+
+        "modules-left": [
+          "sway/workspaces";
+          "sway/mode";
+          "sway/scratchpad"
+        ];
+
+        "modules-center": [
+          "pulseaudio";
+          "pulseaudio#microphone"
+        ];
+
+        "modules-right": [
+          "idle_inhibitor";
+          "network";
+          "cpu";
+          "memory";
+          "temperature";
+          "keyboard-state";
+          "sway/language";
+          "clock";
+          "tray";
+          "custom/power"
+        ];
+
+        "sway/scratchpad": {
+          "format": "S";
+          "disable-scroll": true;
+          "warp-on-scroll": false
+        };
+
+        "sway/workspaces": {
+          "disable-scroll": true;
+          "all-outputs": false;
+          "warp-on-scroll": false;
+          "format": "{name} {icon}";
+          "format-icons": {
+	          "default": "";
+	          "focused": ""
+          };
+        };
+
+        "keyboard-state": {
+          "numlock": true;
+          "scrolllock": false;
+          "capslock": false;
+          "format": "{icon}";
+          "format-icons": {
+            "locked": "";
+	          "unlocked": ""
+          }
+        };
+
+        "idle_inhibitor": {
+          "format": "{icon}";
+          "format-icons": {
+            "activated": "";
+	          "deactivated": ""
+          }
+        };
+
+        "tray": {
+          "icon-size": 11;
+          "spacing": 8
+        };
+
+        "clock": {
+          "timezone": "America/Chicago";
+          "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
+          "format-alt": "{:%Y-%m-%d}"
+        };
+
+        "cpu": {
+          "format": "{usage}% ";
+          "tooltip": false
+        };
+
+        "memory": {
+          "format": "{}% "
+        };
+
+        "temperature": {
+          "critical-threshold": 80;
+          "format": "{temperatureC}°C {icon}";
+          "format-icons": [""]
+        };
+
+        "network": {
+          "format-wifi": "{essid} ({signalStrength}%) ";
+          "format-ethernet": "{ipaddr}/{cidr} ";
+          "tooltip-format": "{ifname} via {gwaddr}";
+          "format-linked": "{ifname} (No IP)";
+          "format-disconnected": "Disconnected ⚠";
+          "format-alt": "{ifname}: {ipaddr}/{cidr}"
+        };
+
+        "battery": {
+          "bat": "BAT0",
+          "interval": 20,
+          "states": {
+            "warning": 20,
+            "critical": 10
+          },
+          "format": "{capacity}% {icon}",
+          "format-charging": "{capacity}% ",
+          "format-plugged": "{capacity}% ",
+          "format-full": "{capacity}% ",
+          "format-icons": ["", "", "", "", ""],
+          "tooltip-format": "{time} remaining"
+        },
+
+        "pulseaudio": {
+          "format": "{icon} {volume}%";
+          "tooltip": false;
+          "format-muted": " Muted";
+          "format-icons": {
+            "default": [""; "", ""]
+          };
+          "on-scroll-up": "pamixer -i 2";
+          "on-scroll-down": "pamixer -d 2";
+          "scroll-step": 5;
+          "on-click": "pamixer -t"
+        };
+
+        "pulseaudio#microphone": {
+          "format": "{format_source}";
+          "format-source": "{volume}% ";
+          "tooltip": false;
+          "format-source-muted": "Muted ";
+          "on-click": "pamixer --default-source -t";
+          "on-scroll-up": "pamixer --default-source -i 2";
+          "on-scroll-down": "pamixer --default-source -d 2";
+          "scroll-step": 5
+        };
+
+        "custom/power": {
+          "format" : "⏻";
+          "tooltip": false;
+          "menu": "on-click";
+          "menu-file": "$HOME/.config/waybar/power_menu.xml";
+          "menu-actions": {
+            "shutdown": "poweroff";
+            "reboot": "reboot";
+            "suspend": "systemctl suspend";
+            "hibernate": "systemctl hibernate"
+          };
+        };
+      };
+    ];
+
+    style = ''
+/* Catppuccin Mocha Theme for Waybar */
+
+/* Global bar styling */
+
+* {
+    font-family: "DepartureMono Nerd Font", "JetBrainsMono Nerd Font", "monospace";
+    font-size: 13px;
+    min-height: 0;
+    box-shadow: none;
+    border-radius: 0;
+    border: none;
+    color: #c6d0f5; /* Catppuccin text */
+}
+
+window#waybar {
+    background: #1e1e2e; /* Catppuccin base */
+    border-bottom: 1px solid #45475a; /* Catppuccin surface1 */
+}
+
+/* Module blocks */
+
+#workspaces, #sway-workspaces {
+    margin: 0 6px;
+}
+
+#workspaces button, #sway-workspaces button {
+    background: transparent;
+    color: #c6d0f5;
+    border: none;
+    padding: 0 8px;
+    margin: 0 2px;
+    transition: background 0.2s, color 0.2s;
+}
+
+#workspaces button.active, #sway-workspaces button.active {
+    background: #45475a; /* surface1 */
+    color: #f9e2af;      /* yellow */
+    text-shadow: 0 1px 2px #313244;
+    border-radius: 4px;
+}
+
+#workspaces button.urgent, #sway-workspaces button.urgent {
+    background: #f38ba8; /* red */
+    color: #c6d0f5;
+    border-radius: 4px;
+}
+
+#pulseaudio, #pulseaudio#microphone, #pulseaudio.microphone {
+    padding: 0 10px;
+    color: #a6e3a1; /* green */
+}
+
+#cpu {
+    padding: 0 10px;
+    color: #fab387; /* peach */
+}
+
+#memory {
+    padding: 0 10px;
+    color: #cba6f7; /* mauve */
+}
+
+#temperature {
+    padding: 0 10px;
+    color: #f38ba8; /* red */
+}
+
+#keyboard-state {
+    padding: 0 10px;
+    color: #f9e2af; /* yellow */
+}
+
+#sway-language {
+    padding: 0 10px;
+    color: #a6e3a1; /* green */
+}
+
+#clock {
+    padding: 0 10px;
+    color: #f9e2af; /* yellow */
+}
+
+#network {
+    padding: 0 10px;
+    color: #74c7ec; /* sky */
+}
+
+#battery {
+  padding: 0 10px;
+  color: #f9e2af;
+}
+
+#tray {
+    padding: 0 8px;
+}
+
+#custom-power {
+    padding: 0 10px;
+    color: #f38ba8; /* red */
+}
+
+#idle_inhibitor {
+    padding: 0 10px;
+    color: #cba6f7; /* mauve */
+}
+
+/* Optional: hover/focus/active states for interactivity */
+
+#workspaces button:hover, #sway-workspaces button:hover {
+    background: #313244; /* surface0 */
+    color: #f9e2af;
+}
+
+#workspaces button.focused, #sway-workspaces button.focused {
+    background: #cba6f7; /* mauve */
+    color: #c6d0f5;
+}
+
+/* Tooltip styling */
+
+tooltip {
+    background: #1e1e2e;      /* base */
+    color: #c6d0f5;
+    border-radius: 4px;
+    border: 1px solid #45475a; /* surface1 */
+    padding: 6px 10px;
+    font-size: 12px;
+}
+
+/* Minimal separators for clarity */
+
+#cpu, #memory, #temperature, #network, #pulseaudio, #pulseaudio#microphone, #clock, #keyboard-state, #sway-language, #custom-weather, #custom-power, #idle_inhibitor {
+    border-left: 1px solid #45475a;
+}
+
+#cpu { border-left: none; } /* Remove left border from first module in the group */
+
+/* Hide module borders if they're first in their segment */
+.modules-left > widget:first-child > * ,
+.modules-center > widget:first-child > * ,
+.modules-right > widget:first-child > * {
+    border-left: none;
+}
+
+/* Menu Colors */
+menu, menuitem {
+    background: #1e1e2e; /* base */
+    color: #c6d0f5;
+    border-radius: 4px;
+    border: 1px solid #45475a;
+}
+
+menuitem:hover, menuitem:focus {
+    background: #313244; /* surface0 */
+    color: #f9e2af; /* yellow */
+}
+
+    '';
+  };
+}
