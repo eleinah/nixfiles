@@ -20,5 +20,5 @@
         theme.enableGtk = false;
       };
     };
-  }
+  };
 }
