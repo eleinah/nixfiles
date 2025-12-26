@@ -6,22 +6,22 @@
 
     settings = [
       {
-        "layer": "top";
-        "position": "top";
-        "height": 0;
+        "layer" = "top";
+        "position" = "top";
+        "height" = 0;
 
-        "modules-left": [
+        "modules-left" = [
           "sway/workspaces";
           "sway/mode";
           "sway/scratchpad"
         ];
 
-        "modules-center": [
+        "modules-center" = [
           "pulseaudio";
           "pulseaudio#microphone"
         ];
 
-        "modules-right": [
+        "modules-right" = [
           "idle_inhibitor";
           "network";
           "cpu";
@@ -34,126 +34,126 @@
           "custom/power"
         ];
 
-        "sway/scratchpad": {
-          "format": "S";
-          "disable-scroll": true;
-          "warp-on-scroll": false
+        "sway/scratchpad" = {
+          "format" = "S";
+          "disable-scroll" = true;
+          "warp-on-scroll" = false
         };
 
-        "sway/workspaces": {
-          "disable-scroll": true;
-          "all-outputs": false;
-          "warp-on-scroll": false;
-          "format": "{name} {icon}";
-          "format-icons": {
-	          "default": "";
-	          "focused": ""
+        "sway/workspaces" = {
+          "disable-scroll" = true;
+          "all-outputs" = false;
+          "warp-on-scroll" = false;
+          "format" = "{name} {icon}";
+          "format-icons" = {
+	          "default" = "";
+	          "focused" = ""
           };
         };
 
-        "keyboard-state": {
-          "numlock": true;
-          "scrolllock": false;
-          "capslock": false;
-          "format": "{icon}";
-          "format-icons": {
-            "locked": "";
-	          "unlocked": ""
+        "keyboard-state" = {
+          "numlock" = true;
+          "scrolllock" = false;
+          "capslock" = false;
+          "format" = "{icon}";
+          "format-icons" = {
+            "locked" = "";
+	          "unlocked" = ""
           }
         };
 
-        "idle_inhibitor": {
-          "format": "{icon}";
-          "format-icons": {
-            "activated": "";
-	          "deactivated": ""
+        "idle_inhibitor" = {
+          "format" = "{icon}";
+          "format-icons" = {
+            "activated" = "";
+	          "deactivated" = ""
           }
         };
 
-        "tray": {
-          "icon-size": 11;
-          "spacing": 8
+        "tray" = {
+          "icon-size" = 11;
+          "spacing" = 8
         };
 
-        "clock": {
-          "timezone": "America/Chicago";
-          "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
-          "format-alt": "{:%Y-%m-%d}"
+        "clock" = {
+          "timezone" = "America/Chicago";
+          "tooltip-format" = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
+          "format-alt" = "{:%Y-%m-%d}"
         };
 
-        "cpu": {
-          "format": "{usage}% ";
-          "tooltip": false
+        "cpu" = {
+          "format" = "{usage}% ";
+          "tooltip" = false
         };
 
-        "memory": {
-          "format": "{}% "
+        "memory" = {
+          "format" = "{}% "
         };
 
-        "temperature": {
-          "critical-threshold": 80;
-          "format": "{temperatureC}°C {icon}";
-          "format-icons": [""]
+        "temperature" = {
+          "critical-threshold" = 80;
+          "format" = "{temperatureC}°C {icon}";
+          "format-icons" = [""]
         };
 
-        "network": {
-          "format-wifi": "{essid} ({signalStrength}%) ";
-          "format-ethernet": "{ipaddr}/{cidr} ";
-          "tooltip-format": "{ifname} via {gwaddr}";
-          "format-linked": "{ifname} (No IP)";
-          "format-disconnected": "Disconnected ⚠";
-          "format-alt": "{ifname}: {ipaddr}/{cidr}"
+        "network" = {
+          "format-wifi" = "{essid} ({signalStrength}%) ";
+          "format-ethernet" = "{ipaddr}/{cidr} ";
+          "tooltip-format" = "{ifname} via {gwaddr}";
+          "format-linked" = "{ifname} (No IP)";
+          "format-disconnected" = "Disconnected ⚠";
+          "format-alt" = "{ifname}: {ipaddr}/{cidr}"
         };
 
-        "battery": {
-          "bat": "BAT0",
-          "interval": 20,
-          "states": {
-            "warning": 20,
-            "critical": 10
+        "battery" = {
+          "bat" = "BAT0",
+          "interval" = 20,
+          "states" = {
+            "warning" = 20,
+            "critical" = 10
           },
-          "format": "{capacity}% {icon}",
-          "format-charging": "{capacity}% ",
-          "format-plugged": "{capacity}% ",
-          "format-full": "{capacity}% ",
-          "format-icons": ["", "", "", "", ""],
-          "tooltip-format": "{time} remaining"
+          "format" = "{capacity}% {icon}",
+          "format-charging" = "{capacity}% ",
+          "format-plugged" = "{capacity}% ",
+          "format-full" = "{capacity}% ",
+          "format-icons" = ["", "", "", "", ""],
+          "tooltip-format" = "{time} remaining"
         },
 
-        "pulseaudio": {
-          "format": "{icon} {volume}%";
-          "tooltip": false;
-          "format-muted": " Muted";
-          "format-icons": {
-            "default": [""; "", ""]
+        "pulseaudio" = {
+          "format" = "{icon} {volume}%";
+          "tooltip" = false;
+          "format-muted" = " Muted";
+          "format-icons" = {
+            "default" = [""; "", ""]
           };
-          "on-scroll-up": "pamixer -i 2";
-          "on-scroll-down": "pamixer -d 2";
-          "scroll-step": 5;
-          "on-click": "pamixer -t"
+          "on-scroll-up" = "pamixer -i 2";
+          "on-scroll-down" = "pamixer -d 2";
+          "scroll-step" = 5;
+          "on-click" = "pamixer -t"
         };
 
-        "pulseaudio#microphone": {
-          "format": "{format_source}";
-          "format-source": "{volume}% ";
-          "tooltip": false;
-          "format-source-muted": "Muted ";
-          "on-click": "pamixer --default-source -t";
-          "on-scroll-up": "pamixer --default-source -i 2";
-          "on-scroll-down": "pamixer --default-source -d 2";
-          "scroll-step": 5
+        "pulseaudio#microphone" = {
+          "format" = "{format_source}";
+          "format-source" = "{volume}% ";
+          "tooltip" = false;
+          "format-source-muted" = "Muted ";
+          "on-click" = "pamixer --default-source -t";
+          "on-scroll-up" = "pamixer --default-source -i 2";
+          "on-scroll-down" = "pamixer --default-source -d 2";
+          "scroll-step" = 5
         };
 
-        "custom/power": {
-          "format" : "⏻";
-          "tooltip": false;
-          "menu": "on-click";
-          "menu-file": "$HOME/.config/waybar/power_menu.xml";
-          "menu-actions": {
-            "shutdown": "poweroff";
-            "reboot": "reboot";
-            "suspend": "systemctl suspend";
-            "hibernate": "systemctl hibernate"
+        "custom/power" = {
+          "format"  = "⏻";
+          "tooltip" = false;
+          "menu" = "on-click";
+          "menu-file" = "$HOME/.config/waybar/power_menu.xml";
+          "menu-actions" = {
+            "shutdown" = "poweroff";
+            "reboot" = "reboot";
+            "suspend" = "systemctl suspend";
+            "hibernate" = "systemctl hibernate"
           };
         };
       };
