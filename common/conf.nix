@@ -12,16 +12,15 @@
 
   environment.systemPackages = with pkgs; [
     vim
+  ];
+
+  fonts.packages = with pkgs; [
     noto-fonts
     noto-fonts-color-emoji
     noto-fonts-emoji-blob-bin
     noto-fonts-cjk-sans
     font-awesome_6
-    nerd-font-patcher
-    nerd-fonts.noto
-    nerd-fonts.hack
-    nerd-fonts.departure-mono
-    nerd-fonts.jetbrains-mono
+    nerdfonts
   ];
 
   # editor default
