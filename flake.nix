@@ -25,6 +25,9 @@
             useGlobalPkgs = true;
 	    useUserPackages = true;
 	    extraSpecialArgs = { inherit inputs; };
+	    sharedModules = [
+              inputs.caelestia-shell.homeManagerModules.default
+	    ];
 	    users = {
               ellie = import ./users/ellie;
 	    };
@@ -40,8 +43,6 @@
             ./common
             ./users/ellie/sys.nix
             ./hosts/lab
-
-	    inputs.caelestia-shell.homeManagerModules.default
 
             home-manager.nixosModules.home-manager hm.ellie
           ];
@@ -64,8 +65,6 @@
             ./common
             ./users/ellie/sys.nix
             ./hosts/travelstation
-
-	    inputs.caelestia-shell.homeManagerModules.default
 
             home-manager.nixosModules.home-manager hm.ellie
           ];
