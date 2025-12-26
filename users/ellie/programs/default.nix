@@ -3,6 +3,7 @@
 {
   imports = [
     ./caelestia.nix
+    ./doom-emacs.nix
     ./firefox.nix
     ./git.nix
     ./kitty.nix
