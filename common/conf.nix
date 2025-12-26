@@ -22,6 +22,25 @@
   # allow unfree pkgs
   nixpkgs.config.allowUnfree = true;
 
+  # desktop and xdg stuff
+  services.dbus.enable = true;
+  xdg.portal = {
+    enable = true;
+    extraPortals = with pkgs; [
+      xdg-desktop-portal-gtk
+      xdg-desktop-portal-wlr
+    ];
+
+    config = {
+      common = {
+        default = [ "gtk" "wlr" ];
+      };
+      niri = {
+        default = [ "gtk" "wlr" ];
+      };
+    };
+  };
+
   # enable zsh
   programs.zsh = {
     enable = true;
