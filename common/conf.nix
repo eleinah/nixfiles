@@ -12,6 +12,14 @@
 
   environment.systemPackages = with pkgs; [
     vim
+    noto-fonts
+    noto-fonts-color-emoji
+    noto-fonts-emoji-blob-bin
+    noto-fonts-cjk-sans
+    font-awesome
+    nerd-fonts.profont
+    nerd-fonts.symbols-only
+    nerd-fonts.departure-mono
   ];
 
   # editor default
