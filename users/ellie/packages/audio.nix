@@ -5,5 +5,6 @@
     kew
     qpwgraph
     supercollider
+    deezer-enhanced
   ];
 }
