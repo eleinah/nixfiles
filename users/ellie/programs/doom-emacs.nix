@@ -3,6 +3,6 @@
 {
   programs.doom-emacs = {
     enable = true;
-    doomDir = "$HOME/.doom.d";
+    doomDir = "../home/dots/.doom.d";
   };
 }
