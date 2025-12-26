@@ -8,6 +8,10 @@
       export EDITOR="emacsclient -c -a 'emacs'"
       export TERM="kitty"
       export BROWSER="firefox"
+
+      if [ "$XDG_VTNR" = "1" ] && [ -z "$DISPLAY" ] && [ -z "$WAYLAND_DISPLAY" ]; then
+        exec niri-session
+      fi
     '';
     initContent = ''
       zmodload zsh/complist
