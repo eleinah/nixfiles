@@ -20,7 +20,7 @@
     noto-fonts-emoji-blob-bin
     noto-fonts-cjk-sans
     font-awesome_6
-    nerdfonts
+    nerd-fonts
   ];
 
   # editor default
