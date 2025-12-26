@@ -94,7 +94,7 @@
           "tooltip-format" = "{ifname} via {gwaddr}";
           "format-linked" = "{ifname} (No IP)";
           "format-disconnected" = "Disconnected ⚠";
-          "format-alt" = "{ifname}: {ipaddr}/{cidr}"
+          "format-alt" = "{ifname}: {ipaddr}/{cidr}";
         };
 
         "battery" = {
