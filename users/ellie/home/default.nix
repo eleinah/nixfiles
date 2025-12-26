@@ -18,9 +18,5 @@
       source = ./dots/.ssh/config;
     };
 
-    ".doom.d" = {
-      source = ./dots/.doom.d;
-    };
-
   };
 }
