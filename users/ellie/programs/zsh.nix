@@ -4,14 +4,15 @@
   programs.zsh = {
     enable = true;
     enableCompletion = true;
+    loginExtra = ''
+      if [[ -z "$WAYLAND_DISPLAY" && -n "$XDG_VTNR" && "$XDG_VTNR" -eq 1 ]]; then
+          exec niri-session
+      fi
+    ''
     profileExtra = ''
       export EDITOR="emacsclient -c -a 'emacs'"
       export TERM="kitty"
       export BROWSER="firefox"
-
-      if [ "$XDG_VTNR" = "1" ] && [ -z "$DISPLAY" ] && [ -z "$WAYLAND_DISPLAY" ]; then
-        exec niri-session
-      fi
     '';
     initContent = ''
       zmodload zsh/complist
