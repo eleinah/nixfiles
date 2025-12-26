@@ -6,16 +6,16 @@
     shellcheck
     shfmt
     rustup
-    python
-    python-black
-    python-pyflakes
-    python-isort
-    python-pipenv
-    python-nosetests
-    python-pytest
+    python3
+    black
+    python313Packages.pyflakes
+    isort
+    pipenv
+    python313Packages.nose2
+    python313Packages.pytest
     nix
-    golang
-    xmllint
+    go
+    libxml2
     npm
     cmake
     make
