@@ -37,7 +37,7 @@
           "disable-scroll" = true;
           "all-outputs" = false;
           "warp-on-scroll" = false;
-          "format" = "{name} {icon}";
+          "format" = "{icon}";
           "format-icons" = {
 	          "default" = "";
 	          "focused" = "";
