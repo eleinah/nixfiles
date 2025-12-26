@@ -8,27 +8,34 @@
       url = "github:nix-community/home-manager/release-25.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    caelestia-shell = {
+      url = "github:caelestia-dots/shell";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }@inputs:
+  outputs = inputs@{ self, nixpkgs, home-manager, ... }:
     let
       system = "x86_64-linux";
       hm = {
 
         ellie = {
-          home-manager.useGlobalPkgs = true;
-          home-manager.useUserPackages = true;
-
-          home-manager.users = {
-            ellie = import ./users/ellie;
-          };
-
+	  home-manager = {
+            useGlobalPkgs = true;
+	    useUserPackages = true;
+	    extraSpecialArgs = { inherit inputs; };
+	    users = {
+              ellie = import ./users/ellie;
+	    };
+	  };
         };
       };
     in {
       nixosConfigurations = {
         nix-lab = nixpkgs.lib.nixosSystem {
-          inherit system;
+	  specialArgs = { inherit inputs; };
+	  inherit system;
           modules = [
             ./common
             ./users/ellie/sys.nix
@@ -38,7 +45,8 @@
           ];
         };
         mainstation = nixpkgs.lib.nixosSystem {
-          inherit system;
+	  specialArgs = { inherit inputs; };
+	  inherit system;
           modules = [
             ./common
             ./users/ellie/sys.nix
@@ -48,7 +56,8 @@
           ];
         };
         travelstation = nixpkgs.lib.nixosSystem {
-          inherit system;
+	  specialArgs = { inherit inputs; };
+	  inherit system;
           modules = [
             ./common
             ./users/ellie/sys.nix

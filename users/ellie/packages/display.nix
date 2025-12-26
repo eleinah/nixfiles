@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   home.packages = with pkgs; [
@@ -11,5 +11,6 @@
     swaylock
     xwayland-satellite
     udiskie
+    inputs.caelestia-shell.packages."${pkgs.stdenv.hostPlatform.system}".default
   ];
 }
