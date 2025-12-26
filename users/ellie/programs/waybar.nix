@@ -148,7 +148,7 @@
             "hibernate" = "systemctl hibernate";
           };
         };
-      };
+      }
     ];
 
     style = ''
