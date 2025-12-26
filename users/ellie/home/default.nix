@@ -19,7 +19,7 @@
     };
 
     ".doom.d" = {
-      source = ./dots/doom.d;
+      source = ./dots/.doom.d;
     };
 
     "Pictures/wallpapers" = {
