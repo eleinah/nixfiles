@@ -2,5 +2,6 @@
 
 {
   imports = [
+    ./npm.nix
   ];
 }
