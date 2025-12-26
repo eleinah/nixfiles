@@ -22,6 +22,7 @@
         "modules-right" = [
           "idle_inhibitor"
           "network"
+          "battery"
           "cpu"
           "memory"
           "temperature"
