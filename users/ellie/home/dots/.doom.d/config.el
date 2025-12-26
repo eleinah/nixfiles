@@ -146,4 +146,8 @@
     map))
 
 ;; Set the font
-(set-face-attribute 'default nil :family "DepartureMono Nerd Font" :height 130)
+(setq doom-font (font-spec :family "DepartureMono Nerd Font" :size 13))
+(add-hook 'doom-init-ui-hook
+          (lambda ()
+            (set-face-attribute 'default nil :family "DepartureMono Nerd Font" :height 130)))
+
