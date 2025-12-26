@@ -9,6 +9,5 @@
     ./starship.nix
     ./zsh.nix
     ./waybar.nix
-    ./npm.nix
   ];
 }
