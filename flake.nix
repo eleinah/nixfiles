@@ -39,7 +39,6 @@
             sharedModules = [
               inputs.nix-doom-emacs-unstraightened.homeModule
               inputs.dms.homeModules.dankMaterialShell.default
-              inputs.dms.homeModules.dankMaterialShell.niri
             ];
             users = {
               ellie = import ./users/ellie;
