@@ -10,7 +10,7 @@
     enable = true;
     enable32Bit = true;
   };
-  amdgpu = {
+  hardware.amdgpu = {
     initrd.enable = true;
   };
 }
