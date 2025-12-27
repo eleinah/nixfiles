@@ -7,6 +7,7 @@
     ./firefox.nix
     ./git.nix
     ./kitty.nix
+    ./niri.nix
     ./starship.nix
     ./zsh.nix
   ];
