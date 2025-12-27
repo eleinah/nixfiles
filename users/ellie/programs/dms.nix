@@ -11,9 +11,9 @@
 
     default.settings.theme = "dark";
 
-    systemd = {
-      enable = true;
-      restartIfChanged = true;
+    niri = {
+      enableKeybinds = true;
+      enableSpawn = true;
     };
 
     enableSystemMonitoring = true;
