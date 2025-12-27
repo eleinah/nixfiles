@@ -9,8 +9,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    caelestia-shell = {
-      url = "github:caelestia-dots/shell";
+    dms = {
+      url = "github:AvengeMedia/DankMaterialShell/stable";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -20,61 +20,72 @@
     };
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager, ... }:
+  outputs =
+    inputs@{
+      self,
+      nixpkgs,
+      home-manager,
+      ...
+    }:
     let
       system = "x86_64-linux";
       hm = {
 
         ellie = {
-	  home-manager = {
+          home-manager = {
             useGlobalPkgs = true;
-	    useUserPackages = true;
-	    extraSpecialArgs = { inherit inputs; };
-	    sharedModules = [
-              inputs.caelestia-shell.homeManagerModules.default
-	      inputs.nix-doom-emacs-unstraightened.homeModule
-	    ];
-	    users = {
+            useUserPackages = true;
+            extraSpecialArgs = { inherit inputs; };
+            sharedModules = [
+              inputs.nix-doom-emacs-unstraightened.homeModule
+              inputs.dms.homeModules.dankMaterialShell.default
+              inputs.dms.homeModules.dankMaterialShell.niri
+            ];
+            users = {
               ellie = import ./users/ellie;
-	    };
-	  };
+            };
+          };
         };
       };
-    in {
+    in
+    {
       nixosConfigurations = {
         nix-lab = nixpkgs.lib.nixosSystem {
-	  specialArgs = { inherit inputs; };
-	  inherit system;
+          specialArgs = { inherit inputs; };
+          inherit system;
           modules = [
             ./common
             ./users/ellie/sys.nix
             ./hosts/lab
 
-            home-manager.nixosModules.home-manager hm.ellie
+            home-manager.nixosModules.home-manager
+            hm.ellie
           ];
         };
         mainstation = nixpkgs.lib.nixosSystem {
-	  specialArgs = { inherit inputs; };
-	  inherit system;
+          specialArgs = { inherit inputs; };
+          inherit system;
           modules = [
             ./common
             ./users/ellie/sys.nix
             ./hosts/mainstation
 
-            home-manager.nixosModules.home-manager hm.ellie
+            home-manager.nixosModules.home-manager
+            hm.ellie
           ];
         };
         travelstation = nixpkgs.lib.nixosSystem {
-	  specialArgs = { inherit inputs; };
-	  inherit system;
+          specialArgs = { inherit inputs; };
+          inherit system;
           modules = [
             ./common
             ./users/ellie/sys.nix
             ./hosts/travelstation
 
-            home-manager.nixosModules.home-manager hm.ellie
+            home-manager.nixosModules.home-manager
+            hm.ellie
           ];
         };
       };
-  };
+    };
 }

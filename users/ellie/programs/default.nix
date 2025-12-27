@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ./caelestia.nix
+    ./dms.nix
     ./doom-emacs.nix
     ./firefox.nix
     ./git.nix
