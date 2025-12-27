@@ -9,7 +9,10 @@
   programs.dankMaterialShell = {
     enable = true;
 
-    default.settings.theme = "dark";
+    default.settings = {
+      theme = "dark";
+      dynamicTheming = true;
+    };
 
     niri = {
       enableKeybinds = true;
