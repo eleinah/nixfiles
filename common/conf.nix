@@ -1,4 +1,9 @@
-{ config, lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 {
   # Use latest kernel.
@@ -8,7 +13,10 @@
   time.timeZone = "America/Chicago";
 
   # Enable Flakes and the new nix CLI tool
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 
   environment.systemPackages = with pkgs; [
     vim
@@ -47,10 +55,10 @@
 
     config = {
       common = {
-        default = [ "gtk" "wlr" ];
-      };
-      niri = {
-        default = [ "gtk" "wlr" ];
+        default = [
+          "gtk"
+          "wlr"
+        ];
       };
     };
   };
@@ -78,7 +86,6 @@
     };
     openFirewall = true;
   };
-
 
   # This option defines the first version of NixOS you have installed on this particular machine,
   # and is used to maintain compatibility with application data (e.g. databases) created on older NixOS versions.
