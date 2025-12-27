@@ -9,11 +9,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    niri = {
-      url = "github:sodiboo/niri-flake";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     dms = {
       url = "github:AvengeMedia/DankMaterialShell/stable";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -42,9 +37,9 @@
             useUserPackages = true;
             extraSpecialArgs = { inherit inputs; };
             sharedModules = [
-              inputs.niri.homeModules.niri
               inputs.nix-doom-emacs-unstraightened.homeModule
               inputs.dms.homeModules.dankMaterialShell.default
+              inputs.dms.homeModules.dankMaterialShell.niri
             ];
             users = {
               ellie = import ./users/ellie;
