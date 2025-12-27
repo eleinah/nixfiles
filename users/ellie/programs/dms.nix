@@ -14,9 +14,9 @@
       dynamicTheming = true;
     };
 
-    niri = {
-      enableKeybinds = true;
-      enableSpawn = true;
+    systemd = {
+      enable = true;
+      restartIfChanged = true;
     };
 
     enableSystemMonitoring = true;
