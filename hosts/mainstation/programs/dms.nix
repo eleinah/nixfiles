@@ -6,7 +6,7 @@
 }:
 
 {
-  programs.dankMaterialShell = {
+  programs.dms-shell = {
     enable = true;
 
     default.settings = {

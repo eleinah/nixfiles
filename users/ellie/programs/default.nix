@@ -2,7 +2,6 @@
 
 {
   imports = [
-    ./dms.nix
     ./doom-emacs.nix
     ./firefox.nix
     ./git.nix
