@@ -43,18 +43,6 @@
     in
     {
       nixosConfigurations = {
-        nix-lab = nixpkgs.lib.nixosSystem {
-          specialArgs = { inherit inputs; };
-          inherit system;
-          modules = [
-            ./common
-            ./users/ellie/sys.nix
-            ./hosts/lab
-
-            home-manager.nixosModules.home-manager
-            hm.ellie
-          ];
-        };
         mainstation = nixpkgs.lib.nixosSystem {
           specialArgs = { inherit inputs; };
           inherit system;
