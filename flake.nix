@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:NixOs/nixpkgs/nixos-unstable";
+    nixpkgs-stable.url = "github:NixOs/nixpkgs/nixos-25.11";
 
     home-manager = {
       url = "github:nix-community/home-manager/master";
@@ -19,6 +20,7 @@
     inputs@{
       self,
       nixpkgs,
+      nixpkgs-stable,
       home-manager,
       ...
     }:
@@ -65,6 +67,13 @@
 
             home-manager.nixosModules.home-manager
             hm.ellie
+          ];
+        };
+        boxoffice = nixpkgs-stable.lib.nixosSystem {
+          inherit system;
+          modules = [
+            ./servers/common
+            ./servers/boxoffice
           ];
         };
       };
