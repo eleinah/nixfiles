@@ -14,6 +14,8 @@
     "d /var/lib/wizarr 0750 media media -"
     "d /var/lib/wizarr/storage 0750 media media -"
     "d /var/lib/wizarr/db 0750 media media -"
+    "d /var/lib/jellyseerr 0750 media media -"
+    "d /var/lib/jellyserr/config 0750 media media -"
     "d /data 0755 root root -"
     "d /data/torrents 0770 media download -"
     "d /data/torrents/books 0770 media download -"

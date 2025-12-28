@@ -16,9 +16,6 @@
   };
 
   services.jellyseerr = {
-    enable = true;
-    openFirewall = false;
-    port = 8097;
-    configDir = "/var/lib/jellyseerr/config";
+    enable = false;
   };
 }
