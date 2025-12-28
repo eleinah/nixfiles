@@ -6,6 +6,7 @@
     ./boot
     ./network
     ./programs
+    ./services
     ./conf.nix
   ];
 }
