@@ -9,5 +9,6 @@
   imports = [
     ./qbittorrent.nix
     ./unpackerr.nix
+    ./wizarr.nix
   ];
 }
