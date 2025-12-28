@@ -10,5 +10,6 @@
     ./jelly.nix
     ./servarr.nix
     ./systemd
+    ./qemuGuest.nix
   ];
 }
