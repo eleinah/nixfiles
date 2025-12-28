@@ -15,9 +15,5 @@
       "media"
       "download"
     ];
-    prowlarr.extraGroups = [
-      "media"
-      "download"
-    ];
   };
 }
