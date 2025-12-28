@@ -24,7 +24,7 @@ in
     ];
 
     serviceConfig = {
-      ExecStart = "${pkgs.docker}/bin/docker run --name jellyseerr --rm --init -p 5055:5055 -e LOG_LEVEL=info -e TZ=America/Chicago -e PORT=5055 -v /var/lib/jellyseerr/config:/app/config";
+      ExecStart = "${pkgs.docker}/bin/docker run --name jellyseerr --rm --init -p 5055:5055 -e LOG_LEVEL=info -e TZ=America/Chicago -e PORT=5055 -v /var/lib/jellyseerr/config:/app/config ${jellyseerrImage}";
       ExecStop = "${pkgs.docker}/bin/docker stop jellyseerr";
       Restart = "on-failure";
       RestartSec = 5;
