@@ -9,11 +9,6 @@
   programs.dms-shell = {
     enable = true;
 
-    default.settings = {
-      theme = "dark";
-      dynamicTheming = true;
-    };
-
     systemd = {
       enable = true;
       restartIfChanged = true;
