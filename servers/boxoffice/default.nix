@@ -3,9 +3,9 @@
 {
   imports = [
     ./hardware-configuration.nix
-    ./packages
-    ./programs
+    ./network
     ./users
-    ./users/groups
+    ./services
+    ./tmpfiles.nix
   ];
 }

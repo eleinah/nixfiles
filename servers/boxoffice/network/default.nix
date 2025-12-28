@@ -7,6 +7,7 @@
 
 {
   imports = [
-
+    ./firewall.nix
+    ./sys.nix
   ];
 }

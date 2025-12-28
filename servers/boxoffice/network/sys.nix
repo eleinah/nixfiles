@@ -6,7 +6,5 @@
 }:
 
 {
-  imports = [
-
-  ];
+  networking.hostName = "boxoffice";
 }
