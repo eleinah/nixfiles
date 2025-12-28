@@ -5,9 +5,6 @@ binds {
     Mod+Shift+Return {
         spawn-sh "emacsclient -c -a 'emacs'";
     }
-    Mod+D {
-        spawn "fuzzel";
-    }
 
     Mod+Shift+Q {
         close-window;

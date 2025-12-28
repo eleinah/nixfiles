@@ -1,3 +1,1 @@
-spawn-at-startup "wl-paste"
-spawn-at-startup "mako"
-spawn-at-startup "caelestia" "shell" "-d"
+spawn-at-startup "bash" "-c" "wl-paste --watch cliphist store &"

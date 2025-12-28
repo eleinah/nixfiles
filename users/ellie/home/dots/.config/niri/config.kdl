@@ -14,5 +14,8 @@ include "bindings/audio.kdl"
 include "bindings/brightness.kdl"
 include "bindings/screenshot.kdl"
 include "bindings/core.kdl"
+include "dms/binds.kdl"
+include "dms/rules.kdl"
+include "dms/env.kdl"
 
 screenshot-path "~/Pictures/screenshots/niri-screenshot-%Y-%m-%d-%H-%M-%S.png"
