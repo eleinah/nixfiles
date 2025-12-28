@@ -17,10 +17,8 @@ window-rule {
 
 window-rule {
     match app-id="kitty"
-    match app-id="helium"
     match app-id="Emacs"
-    match app-id="deezer-enhanced"
-    match app-id="vesktop"
+    match is-active=false
     draw-border-with-background false
 }
 
