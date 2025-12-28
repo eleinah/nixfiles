@@ -6,5 +6,6 @@
     qpwgraph
     supercollider
     deezer-enhanced
+    reaper
   ];
 }
