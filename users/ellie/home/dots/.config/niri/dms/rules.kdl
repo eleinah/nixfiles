@@ -19,13 +19,15 @@ window-rule {
     match app-id="kitty"
     match app-id="helium"
     match app-id="Emacs"
+    match app-id="deezer-enhanced"
+    match app-id="vesktop"
     draw-border-with-background false
 }
 
-// window-rule {
-//    match is-active=false
-//    opacity 0.9
-//}
+window-rule {
+    match is-active=false
+    opacity 0.95
+}
 
 window-rule {
     geometry-corner-radius 12
