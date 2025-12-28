@@ -1,15 +1,27 @@
 { config, pkgs, ... }:
 
 {
+  sound.enable = false;
+  hardware.pulseaudio.enable = false;
+
   services.pipewire = {
     enable = true;
+
+    alsa = {
+      enable = true;
+      support32Bit = true;
+    };
 
     pulse = {
       enable = true;
     };
-  };
 
-  environment.systemPackages = with pkgs; [
-    pulseaudio
-  ];
+    jack = {
+      enable = true;
+    };
+
+    wireplumber = {
+      enable = true;
+    };
+  };
 }
