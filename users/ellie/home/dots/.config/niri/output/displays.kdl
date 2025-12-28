@@ -7,6 +7,7 @@ output "DP-1" {
 output "DP-2" {
     mode "3440x1440@99.982"
     position x=7680 y=720
+    focus-at-startup
 }
 output "HDMI-A-1" {
     mode "2560x1440@74.78"
