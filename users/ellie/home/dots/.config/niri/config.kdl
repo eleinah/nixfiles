@@ -20,3 +20,8 @@ include "dms/rules.kdl"
 include "dms/env.kdl"
 
 screenshot-path "~/Pictures/screenshots/niri-screenshot-%Y-%m-%d-%H-%M-%S.png"
+
+hotkey-overlay {
+    skip-at-startup
+    hide-not-bound
+}
