@@ -14,6 +14,11 @@ binds {
     Mod+Ctrl+K  { focus-monitor-up; }
     Mod+Ctrl+L  { focus-monitor-right; }
 
+    Mod+Shift+Ctrl+H { move-window-to-monitor-left; }
+    Mod+Shift+Ctrl+L { move-window-to-monitor-right; }
+    Mod+Shift+Ctrl+J { move-window-to-monitor-down; }
+    Mod+Shift+Ctrl+K { move-window-to-monitor-up; }
+
     Mod+F { maximize-column; }
     Mod+Shift+F { fullscreen-window; }
     Mod+Ctrl+F { expand-column-to-available-width; }
