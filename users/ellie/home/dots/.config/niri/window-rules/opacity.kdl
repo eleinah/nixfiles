@@ -1,5 +1,5 @@
 window-rule {
     match app-id="kitty"
-    match app-id="emacs"
+    match app-id="Emacs"
     opacity 0.95
 }
