@@ -20,6 +20,6 @@
     openFirewall = false;
     user = "media";
     group = "media";
-    dataDir = "/var/lib/jellyseerr";
+    configDir = "/var/lib/jellyseerr/config";
   };
 }
