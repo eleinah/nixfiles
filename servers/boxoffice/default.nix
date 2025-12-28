@@ -8,4 +8,6 @@
     ./services
     ./tmpfiles.nix
   ];
+
+  virtualisation.docker.enable = true;
 }
