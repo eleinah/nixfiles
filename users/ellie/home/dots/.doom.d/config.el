@@ -146,4 +146,4 @@
     map))
 
 ;; Set the font
-(setq doom-font (font-spec :family "DepartureMono Nerd Font" :size 13))
+(setq doom-font (font-spec :family "DepartureMono Nerd Font" :size 14))
