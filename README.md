@@ -1,4 +1,4 @@
-# Ellie's Nixfiles
+# Ellie's Nixfiles ❄
 
 Hi there, I'm starting to really enjoy Nix and NixOS so far.
 
