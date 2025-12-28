@@ -18,8 +18,7 @@
   services.jellyseerr = {
     enable = true;
     openFirewall = false;
-    user = "media";
-    group = "media";
+    port = 8097;
     configDir = "/var/lib/jellyseerr/config";
   };
 }
