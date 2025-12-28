@@ -20,7 +20,7 @@ binds {
     }
 
     // Security
-    Ctrl+Mod+L hotkey-overlay-title="Lock Screen" {
+    Mod+Alt+L hotkey-overlay-title="Lock Screen" {
         spawn "dms" "ipc" "call" "lock" "lock";
     }
 

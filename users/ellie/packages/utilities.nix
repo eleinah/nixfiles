@@ -17,5 +17,6 @@
     xarchiver
     ispell
     aspell
+    keymapp
   ];
 }

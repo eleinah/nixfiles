@@ -17,8 +17,4 @@ binds {
     Mod+Shift+Slash {
         show-hotkey-overlay;
     }
-
-    Mod+Ctrl+L hotkey-overlay-title="Lock System" {
-        spawn-sh "swaylock --color 000000"
-    }
 }
