@@ -8,6 +8,7 @@
 {
   systemd.services.unpackerr = {
     description = "unpackerr daemon";
+    wants = [ "network-online.target" ];
     after = [ "network-online.target" ];
     wantedBy = [ "multi-user.target" ];
     environment = {
