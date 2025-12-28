@@ -8,5 +8,6 @@
     nmap
     ipcalc
     tcpdump
+    wishlist
   ];
 }
