@@ -9,5 +9,6 @@
     ipcalc
     tcpdump
     wishlist
+    globalprotect-openconnect
   ];
 }
