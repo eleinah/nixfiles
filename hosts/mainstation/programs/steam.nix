@@ -6,5 +6,6 @@
     extraCompatPackages = [
       pkgs.proton-ge-bin
     ];
+    protontricks.enable = true;
   };
 }

@@ -5,5 +5,6 @@
     ./dms.nix
     ./steam.nix
     ./niri.nix
+    ./winetricks.nix
   ];
 }

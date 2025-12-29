@@ -4,7 +4,5 @@
   home.packages = with pkgs; [
     prismlauncher
     xivlauncher
-    winetricks
-    protontricks
   ];
 }
