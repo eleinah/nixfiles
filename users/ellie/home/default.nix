@@ -14,6 +14,10 @@
       executable = true;
     };
 
+    ".gnupg" = {
+      source = ./dots/.gnupg;
+    };
+
     ".ssh/config" = {
       source = ./dots/.ssh/config;
     };
