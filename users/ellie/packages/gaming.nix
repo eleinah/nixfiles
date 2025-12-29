@@ -5,5 +5,6 @@
     gamescope
     prismlauncher
     xivlauncher
+    protontricks
   ];
 }
