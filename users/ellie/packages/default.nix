@@ -16,5 +16,6 @@
     ./systools.nix
     ./uncategorized.nix
     ./utilities.nix
+    ./yubikey.nix
   ];
 }
