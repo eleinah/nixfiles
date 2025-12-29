@@ -11,6 +11,7 @@
     ./langs.nix
     ./networking.nix
     ./nix.nix
+    ./scripts.nix
     ./stateVersion.nix
     ./syscall.nix
     ./systools.nix

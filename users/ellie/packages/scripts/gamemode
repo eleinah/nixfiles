@@ -1,0 +1,41 @@
+#!/usr/bin/env bash
+
+show_usage() {
+    echo "Usage: $0 [on|off]"
+    echo "  on  - Turn on gaming mode"
+    echo "  off  - Turn off gaming mode"
+    exit 1
+}
+
+others=("DP-1" "HDMI-A-1")
+
+toggle_on() {
+    for mon in "${others[@]}"; do
+        niri msg output "$mon" off
+    done
+}
+
+toggle_off() {
+    for mon in "${others[@]}"; do
+        niri msg output "$mon" on
+    done
+}
+
+if [ $# -eq 0 ]; then
+    echo "No machine type specified."
+    echo ""
+    show_usage
+elif [ "$1" = "-h" ] || [ "$1" = "--help" ]; then
+    show_usage
+elif [ "$1" = "on" ] || [ "$1" = "off" ]; then
+    SWITCH="$1"
+else
+    echo "Error: Invalid Option '$1'"
+    show_usage
+fi
+
+if [ "$SWITCH" = "on" ]; then
+    toggle_on
+else
+    toggle_off
+fi
