@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ./battery.nix
     ./blueman.nix
   ];
 }
