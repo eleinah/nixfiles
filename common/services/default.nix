@@ -7,6 +7,7 @@
 
 {
   imports = [
+    ./battery.nix
     ./udev.nix
   ];
 }
