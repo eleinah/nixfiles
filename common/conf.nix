@@ -20,6 +20,10 @@
 
   environment.systemPackages = with pkgs; [
     vim
+    gnupg
+    yubikey-manager
+    yubikey-personalization
+    pcsclite
   ];
 
   fonts.packages = with pkgs; [
@@ -75,6 +79,8 @@
     enable = true;
     enableSSHSupport = true;
   };
+  services.pcscd.enable = true;
+  services.udev.packages = with pkgs; [ yubikey-personalization ];
 
   # Enable the OpenSSH daemon.
   services.openssh = {

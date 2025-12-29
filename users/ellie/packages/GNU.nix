@@ -5,7 +5,6 @@
     file
     which
     tree
-    gnupg
     gawk
   ];
 }
