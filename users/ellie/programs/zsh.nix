@@ -46,6 +46,7 @@
       wthr = "curl wttr.in";
       ff = "fastfetch";
       view = "viu -a";
+      ssh = "wishlist";
     };
     sessionVariables = {
       GIT_EDITOR = "emacsclient -c -a 'emacs'";
