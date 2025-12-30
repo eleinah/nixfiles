@@ -6,9 +6,9 @@
 }:
 
 let
-  scriptNames = lib.attrNames (builtins.readDir ./scripts);
+  scriptNames = lib.attrNames (builtins.readDir ../scripts);
   scripts = builtins.map (
-    name: pkgs.writeShellScriptBin name (builtins.readFile (./scripts + "/${name}"))
+    name: pkgs.writeShellScriptBin name (builtins.readFile (../scripts + "/${name}"))
   ) scriptNames;
 in
 {

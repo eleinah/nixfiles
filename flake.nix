@@ -56,8 +56,8 @@
           inherit system;
           modules = [
             ./hosts/common
-            ./home-manager/ellie
             ./hosts/mainstation
+            ./home-manager/ellie/sys.nix
 
             home-manager.nixosModules.home-manager
             hm.ellie
@@ -68,8 +68,8 @@
           inherit system;
           modules = [
             ./hosts/common
-            ./home-manager/ellie
             ./hosts/travelstation
+            ./home-manager/ellie/sys.nix
 
             home-manager.nixosModules.home-manager
             hm.ellie
