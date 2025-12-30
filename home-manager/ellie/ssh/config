@@ -33,3 +33,6 @@ Host hv5
 Host hv6
      Hostname hv6.lly.local
      User Administrator
+Host dc
+     Hostname ad.lly.local
+     User Administrator
