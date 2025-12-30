@@ -4,12 +4,12 @@
   home.file = {
 
     ".config" = {
-      source = ./dots/.config;
+      source = ./config;
       recursive = true;
     };
 
     ".ssh/config" = {
-      source = ./dots/.ssh/config;
+      source = ./ssh/config;
     };
 
     "Pictures/wallpapers" = {

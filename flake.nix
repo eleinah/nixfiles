@@ -37,20 +37,26 @@
               inputs.nix-doom-emacs-unstraightened.homeModule
             ];
             users = {
-              ellie = import ./users/ellie;
+              ellie = import ./home-manager/ellie;
             };
           };
         };
+
       };
     in
     {
+      packages = import ./pkgs nixpkgs.legacyPackages.${system};
+      overlays = import ./overlays { inherit inputs; };
+      nixosModules = import ./modules/nixos;
+      homeManagerModules = import ./modules/home-manager;
+
       nixosConfigurations = {
         mainstation = nixpkgs.lib.nixosSystem {
           specialArgs = { inherit inputs; };
           inherit system;
           modules = [
-            ./common
-            ./users/ellie/sys.nix
+            ./hosts/common
+            ./home-manager/ellie
             ./hosts/mainstation
 
             home-manager.nixosModules.home-manager
@@ -61,8 +67,8 @@
           specialArgs = { inherit inputs; };
           inherit system;
           modules = [
-            ./common
-            ./users/ellie/sys.nix
+            ./hosts/common
+            ./home-manager/ellie
             ./hosts/travelstation
 
             home-manager.nixosModules.home-manager

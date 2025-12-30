@@ -2,8 +2,8 @@
 
 {
   imports = [
+    ./files.nix
     ./settings.nix
-    ./home
     ./packages
     ./programs
     ./services
