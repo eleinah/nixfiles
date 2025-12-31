@@ -15,6 +15,15 @@ Host mainstation
 Host boxoffice
      Hostname boxoffice.lly.local
      User ticketmaster
+Host caddy
+    Hostname caddy.lly.local
+    User root
+Host crafty
+     Hostname crafty.lly.local
+     User root
+Host thischord
+     Hostname thischord.lly.local
+     User root
 Host hv1
      Hostname hv1.lly.local
      User Administrator
@@ -35,4 +44,7 @@ Host hv6
      User Administrator
 Host dc
      Hostname ad.lly.local
+     User Administrator
+Host wac
+     Hostname wac.lly.local
      User Administrator
