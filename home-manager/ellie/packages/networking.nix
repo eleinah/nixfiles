@@ -8,7 +8,6 @@
     nmap
     ipcalc
     tcpdump
-    wishlist
     gpclient
   ];
 }
