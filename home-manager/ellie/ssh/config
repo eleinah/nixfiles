@@ -43,7 +43,7 @@ Host hv6
      Hostname hv6.lly.local
      User Administrator
 Host dc
-     Hostname ad.lly.local
+     Hostname dc.lly.local
      User Administrator
 Host wac
      Hostname wac.lly.local
