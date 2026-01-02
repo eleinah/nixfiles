@@ -25,6 +25,7 @@
       ...
     }:
     let
+      homeManagerModules = import ./modules/home-manager;
       system = "x86_64-linux";
       hm = {
 
@@ -35,6 +36,7 @@
             extraSpecialArgs = { inherit inputs; };
             sharedModules = [
               inputs.nix-doom-emacs-unstraightened.homeModule
+              homeManagerModules.librepods
             ];
             users = {
               ellie = import ./home-manager/ellie;
@@ -43,18 +45,26 @@
         };
 
       };
+
+      myOverlays = import ./overlays { inherit inputs; };
+
+      overlayModule =
+        { config, pkgs, ... }:
+        {
+          nixpkgs.overlays = builtins.attrValues myOverlays;
+        };
     in
     {
       packages = import ./pkgs nixpkgs.legacyPackages.${system};
-      overlays = import ./overlays { inherit inputs; };
+      overlays = myOverlays;
       nixosModules = import ./modules/nixos;
-      homeManagerModules = import ./modules/home-manager;
 
       nixosConfigurations = {
         mainstation = nixpkgs.lib.nixosSystem {
           specialArgs = { inherit inputs; };
           inherit system;
           modules = [
+            overlayModule
             ./hosts/common
             ./hosts/mainstation
             ./home-manager/ellie/sys.nix
@@ -67,6 +77,7 @@
           specialArgs = { inherit inputs; };
           inherit system;
           modules = [
+            overlayModule
             ./hosts/common
             ./hosts/travelstation
             ./home-manager/ellie/sys.nix

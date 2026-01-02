@@ -9,5 +9,6 @@
     ./kitty.nix
     ./starship.nix
     ./zsh.nix
+    ./librepods.nix
   ];
 }

@@ -1,5 +1,5 @@
 { config, pkgs, ... }:
 
 {
-  programs.npm.enable = true;
+  programs.npm.enable = false;
 }
