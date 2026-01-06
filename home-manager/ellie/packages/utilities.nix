@@ -7,6 +7,7 @@
     jq
     fzf
     fd
+    foliate
     wget
     bottom
     dysk
