@@ -5,4 +5,5 @@
 {
   # example = pkgs.callPackage ./example { };
   librepods = import ./librepods.nix { inherit pkgs; };
+  helium-browser = import ./helium-browser.nix { inherit pkgs; };
 }

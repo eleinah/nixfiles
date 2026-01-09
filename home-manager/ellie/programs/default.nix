@@ -10,5 +10,6 @@
     ./starship.nix
     ./zsh.nix
     ./librepods.nix
+    ./helium-browser.nix
   ];
 }
