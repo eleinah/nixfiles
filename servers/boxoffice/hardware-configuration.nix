@@ -38,6 +38,11 @@
     ];
   };
 
+  fileSystems."/data" = {
+    device = "/dev/disk/by-label/mediasrv";
+    fsType = "xfs";
+  };
+
   swapDevices = [
     { device = "/dev/disk/by-label/swap"; }
   ];
