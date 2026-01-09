@@ -7,7 +7,7 @@
 
 let
   jellyseerrImage = "ghcr.io/fallenbagel/jellyseerr:latest";
-  wizarrImage = "ghcr.io/wizarrrr/wizarr:latest";
+  jfaImage = "hrfee/jfa-go";
 in
 {
   systemd.services = {
@@ -52,8 +52,8 @@ in
       };
     };
 
-    wizarr = {
-      description = "Wizarr docker image";
+    jfa-go = {
+      description = "jfa-go docker image for invite management";
       after = [
         "docker.service"
         "network-online.target"
@@ -67,7 +67,7 @@ in
       ];
 
       serviceConfig = {
-        ExecStart = "${pkgs.docker}/bin/docker run --name wizarr --rm -p 5690:5690 -e TZ='America/Chicago' -e STORAGE_DIR=/data/storage -e DB_DIR=/data/db -v /var/lib/wizarr/storage:/data/storage -v /var/lib/wizarr/db:/data/db ${wizarrImage}";
+        ExecStart = "${pkgs.docker}/bin/docker run --name jfa-go --rm -p 8056:8056 -e TZ='America/Chicago' -v /var/lib/jfa-go:/data -v /etc/localtime:/etc/localtime:ro ${jfaImage}";
         ExecStop = "${pkgs.docker}/bin/docker stop wizarr";
         Restart = "on-failure";
         RestartSec = 5;

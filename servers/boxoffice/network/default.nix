@@ -19,6 +19,7 @@
         8989 # Sonarr
         9696 # Prowlarr
         5656 # Unpackerr
+        8056 # jfa-go
       ];
     };
 
