@@ -8,10 +8,7 @@
 let
   cfg = config.programs.helium-browser;
 
-  rawIcon = pkgs.fetchurl {
-    url = "https://github.com/imputnet/helium/blob/main/resources/branding/app_icon/raw.png";
-    sha256 = "sha256-OjPOH/uUSVbNC12lEPyBi/yxTrjTkCQJMg45x/uoIGs=";
-  };
+  rawIcon = ./xdg-icons/helium-browser.png;
 
   iconPath = ".local/share/icons/helium-browser.png";
 

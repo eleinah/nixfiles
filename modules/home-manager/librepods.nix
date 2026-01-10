@@ -7,10 +7,7 @@
 let
   cfg = config.programs.librepods;
 
-  rawIcon = pkgs.fetchurl {
-    url = "https://raw.githubusercontent.com/kavishdevar/librepods/refs/heads/main/linux/assets/librepods.png";
-    sha256 = "sha256-Uo6mBSVkYgfNR+41PT02e1QaUsMoqW/Zaew1aJgjUvg=";
-  };
+  rawIcon = ./xdg-icons/librepods.png;
 
   iconPath = ".local/share/icons/librepods.png";
 
