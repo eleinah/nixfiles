@@ -24,27 +24,6 @@ Host crafty
 Host thischord
      Hostname thischord.lly.local
      User root
-Host hv1
-     Hostname hv1.lly.local
-     User Administrator
-Host hv2
-     Hostname hv2.lly.local
-     User Administrator
-Host hv3
-     Hostname hv3.lly.local
-     User Administrator
-Host hv4
-     Hostname hv4.lly.local
-     User Administrator
-Host hv5
-     Hostname hv5.lly.local
-     User Administrator
-Host hv6
-     Hostname hv6.lly.local
-     User Administrator
-Host dc
-     Hostname dc.lly.local
-     User Administrator
-Host wac
-     Hostname wac.lly.local
-     User Administrator
+Host omv
+     Hostname omv.lly.local
+     User ellie
