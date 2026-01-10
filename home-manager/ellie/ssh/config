@@ -24,6 +24,6 @@ Host crafty
 Host thischord
      Hostname thischord.lly.local
      User root
-Host omv
-     Hostname omv.lly.local
-     User ellie
+Host sync
+     Hostname sync.lly.local
+     User root
