@@ -6,6 +6,15 @@
 }:
 let
   cfg = config.programs.librepods;
+
+  rawIcon = pkgs.fetchurl {
+    url = "https://raw.githubusercontent.com/kavishdevar/librepods/refs/heads/main/linux/assets/librepods.png";
+    sha256 = "sha256-Uo6mBSVkYgfNR+41PT02e1QaUsMoqW/Zaew1aJgjUvg=";
+  };
+
+  iconPath = ".local/share/icons/librepods.png";
+
+  appIcon = "${config.home.homeDirectory}/${iconPath}";
 in
 {
   options.programs.librepods = {
@@ -27,10 +36,13 @@ in
       cfg.package
     ];
 
+    home.file."${iconPath}".source = rawIcon;
+
     xdg.desktopEntries.librepods = {
       name = "LibrePods";
       exec = "librepods";
       terminal = false;
+      icon = "${appIcon}";
       type = "Application";
       categories = [
         "AudioVideo"

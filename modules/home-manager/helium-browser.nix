@@ -7,6 +7,15 @@
 
 let
   cfg = config.programs.helium-browser;
+
+  rawIcon = pkgs.fetchurl {
+    url = "https://github.com/imputnet/helium/blob/main/resources/branding/app_icon/raw.png";
+    sha256 = "sha256-OjPOH/uUSVbNC12lEPyBi/yxTrjTkCQJMg45x/uoIGs=";
+  };
+
+  iconPath = ".local/share/icons/helium-browser.png";
+
+  appIcon = "${config.home.homeDirectory}/${iconPath}";
 in
 {
   options.programs.helium-browser = {
@@ -23,10 +32,13 @@ in
       cfg.package
     ];
 
+    home.file."${iconPath}".source = rawIcon;
+
     xdg.desktopEntries.helium-browser = {
       name = "Helium Browser";
       exec = "helium-browser";
       terminal = false;
+      icon = "${appIcon}";
       type = "Application";
       categories = [
         "WebBrowser"
