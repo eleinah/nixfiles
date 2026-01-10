@@ -12,7 +12,7 @@
     profileExtra = ''
       export EDITOR="emacsclient -c -a 'emacs'"
       export TERM="kitty"
-      export BROWSER="firefox"
+      export BROWSER="helium-browser"
     '';
     initContent = ''
       zmodload zsh/complist
