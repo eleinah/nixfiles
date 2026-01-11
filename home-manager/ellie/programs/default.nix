@@ -11,6 +11,5 @@
     ./zsh.nix
     ./librepods.nix
     ./helium-browser.nix
-    ./hytale.nix
   ];
 }
