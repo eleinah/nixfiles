@@ -38,7 +38,7 @@ in
 
     xdg.desktopEntries.hytale = {
       name = "Hytale Launcher";
-      exec = "flatpak run com.hypixel.HytaleLauncher";
+      exec = "flatpak run --user com.hypixel.HytaleLauncher";
       terminal = false;
       icon = "${appIcon}";
       type = "Application";
