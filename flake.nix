@@ -100,6 +100,13 @@
             ./servers/boxoffice
           ];
         };
+        choral = nixpkgs-stable.lib.nixosSystem {
+          inherit system;
+          modules = [
+            ./servers/common
+            ./servers/choral
+          ];
+        };
       };
     };
 }
