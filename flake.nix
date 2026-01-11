@@ -38,6 +38,7 @@
               inputs.nix-doom-emacs-unstraightened.homeModule
               homeManagerModules.librepods
               homeManagerModules.helium-browser
+              homeManagerModules.hytale
             ];
             users = {
               ellie = import ./home-manager/ellie;

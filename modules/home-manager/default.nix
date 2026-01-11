@@ -5,4 +5,5 @@
   # my-module = import ./my-module.nix;
   librepods = import ./librepods.nix;
   helium-browser = import ./helium-browser.nix;
+  hytale = import ./hytale.nix;
 }
