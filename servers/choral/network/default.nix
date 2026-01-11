@@ -7,7 +7,7 @@
 
 {
   networking = {
-    hostname = "choral";
+    hostName = "choral";
 
     firewall = {
       allowedTCPPorts = [
