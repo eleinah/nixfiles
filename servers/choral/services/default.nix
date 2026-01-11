@@ -16,6 +16,7 @@
       openFirewall = false;
       user = "soul";
       group = "download";
+      domain = "choral.lly.local";
     };
 
     syncthing = {
