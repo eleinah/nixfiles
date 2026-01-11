@@ -54,3 +54,5 @@
 (package! elcord)
 (package! tidal)
 (package! d2-mode)
+(package! age)
+(package! agenix)

@@ -14,6 +14,10 @@
       url = "github:marienz/nix-doom-emacs-unstraightened";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    agenix = {
+      url = "github:ryantm/agenix";
+    };
   };
 
   outputs =
@@ -38,6 +42,8 @@
               inputs.nix-doom-emacs-unstraightened.homeModule
               homeManagerModules.librepods
               homeManagerModules.helium-browser
+              inputs.agenix.homeManagerModules.default
+              ./secrets
             ];
             users = {
               ellie = import ./home-manager/ellie;

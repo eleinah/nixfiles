@@ -20,5 +20,6 @@
     ispell
     aspell
     keymapp
+    age
   ];
 }
